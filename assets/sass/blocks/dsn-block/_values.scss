@@ -1,0 +1,31 @@
+.dsn-values {
+    .values-item {
+      position: relative;
+      border-radius: 5px;
+      padding: 50px 30px;
+
+      .icon-right {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+
+        svg {
+          height: 35px;
+          opacity: 0.2;
+
+          path {
+            fill: $heading-color;
+          }
+        }
+      }
+    }
+
+    .item-img {
+      border-radius: 5px;
+
+      .box-img,
+      img {
+        border-radius: 5px;
+      }
+    }
+}

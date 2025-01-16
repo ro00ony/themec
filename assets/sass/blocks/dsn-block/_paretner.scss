@@ -1,0 +1,51 @@
+.dsn-paretner {
+
+  .info {
+    z-index: 10;
+    h2 {
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    h4 {
+      color: white;
+      font-size: 18px;
+    }
+  }
+  .paretner-inner {
+
+      .paretner-item {
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+        img {
+          border-radius: 50%;
+        }
+      }
+      @include media_768 {
+
+        .paretner-boxs {
+          grid-column-gap: 15px;
+          grid-row-gap: 15px;
+
+          .paretner-item {
+            aspect-ratio: auto;
+            margin: 0;
+          }
+        }
+      }
+  }
+
+
+}
+
+.v-dark {
+  .paretner-item {
+    img {
+      filter: invert(1);
+    }
+  }
+}

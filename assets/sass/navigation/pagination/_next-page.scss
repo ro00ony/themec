@@ -1,0 +1,12 @@
+.next-page {
+    .contact-box {
+        .title {
+            font-size: 30px;
+        }            
+        @include media_575 {
+            flex-direction: column;
+            align-items: baseline;
+            gap: 25px;
+        }
+    }
+}
