@@ -37,85 +37,19 @@
 
   }
 
-  &.services-accordion {
-    .accordion__item {
-      border-top: 1px solid $border-color;
-      padding-top: 24px;
-
-      &:not(:last-of-type) {
-        margin-bottom: 30px;
-      }
-
-      .accordion__question {
-
-        .icon {
-          rotate: 50deg;
-          transition: 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-
-          svg {
-            width: 50px;
-
-            path {
-              fill: $heading-color;
-            }
-          }
-        }
-      }
-
-      &.active {
-
-        .accordion__question {
-          .icon {
-            rotate: -50deg;
-          }
-        }
-      }
-
-      .accordion__answer {
-        margin-top: 10px;
-
-        .icon {
-          background-color: $theme-color;
-          width: 80px;
-          height: 80px;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          svg {
-            width: 40px;
-
-            path {
-              fill: transparent;
-              stroke: $heading-color;
-            }
-          }
-        }
-
-        ul {
-          li {
-
-            &:not(:last-of-type) {
-              margin-bottom: 5px;
-            }
-          }
-        }
-      }
-
-      &:first-of-type {
-        margin-top: 0;
-      }
-
-    }
-  }
-
   &.services-personal {
     .service-item {
       position: relative;
       padding-top: 30px;
       padding-bottom: 30px;
       border-bottom: 1px solid $border-color;
+      opacity: 0.1;
+      &:last-of-type {
+        opacity: 1;
+      }
+      &:hover {
+        opacity: 1 !important;
+      }
 
       ul {
         li:not(:last-of-type) {
@@ -128,32 +62,20 @@
       }
 
       .title-box {
-        .number {
-          color: $heading-color;
-          font-size: 86px;
-          font-family: $body-font;
-          margin-right: 30px;
-          width: 40px;
-          line-height: .9;
-          transform: scaleY(1.08);
-
-          @include media_768 {
-            font-size: 50px;
-            margin-bottom: 10px;
-          }
+        .current-way {
+          position: absolute;
+          width: 100px;
+          height: 30px;
+          text-align: center;
+          line-height: 30px;
+          color: white;
+          border-radius: 15px;
+          left: 0;
+          top: 0;
         }
-
         @include media_768 {
           flex-direction: column;
           align-items: baseline;
-        }
-      }
-
-      .text {
-        margin-left: 72px;
-
-        @include media_768 {
-          margin-left: 0;
         }
       }
 
@@ -164,12 +86,9 @@
         }
       }
 
-      .icon-right {
-        svg {
-          width: 35px;
-          height: 50px;
-          fill: $heading-color;
-          opacity: .7;
+      .img-right {
+        img {
+          width: 140px;
         }
       }
     }

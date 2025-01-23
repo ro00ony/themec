@@ -165,6 +165,25 @@
     }
 
 
+    .grid-xl-#{$i} {
+      @include media_1200(min) {
+        grid-template-columns: repeat(#{$i}, 1fr);
+
+        &.dsn-isotope>* {
+          width: calc(#{100% / $i} - var(--grid-gap, 30px));
+          max-width: calc(#{100% / $i} - var(--grid-gap, 30px));
+
+          &:nth-of-type(n + #{$i + 1}) {
+            margin-top: var(--grid-gap-row, 30px);
+          }
+
+          &:nth-of-type(#{$i}) {
+            margin-top: 0;
+          }
+
+        }
+      }
+    }
     .grid-lg-#{$i} {
       @include media_991(min) {
         grid-template-columns: repeat(#{$i}, 1fr);

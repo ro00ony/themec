@@ -837,6 +837,10 @@ a:focus {
   text-transform: uppercase;
 }
 
+.text-capitalize {
+  text-transform: capitalize;
+}
+
 .fw-bold {
   font-weight: bold;
 }
@@ -881,6 +885,14 @@ a:focus {
   color: var(--bg-color);
 }
 
+.bg-graident {
+  background: linear-gradient(to right, #29A9E1, #F68722, #F9CD18);
+}
+
+.bg-white {
+  background: #fff;
+}
+
 .theme-color {
   color: var(--theme-color);
 }
@@ -895,6 +907,10 @@ a:focus {
 
 .background-transparent {
   background-color: transparent;
+}
+
+.w-50p {
+  width: 50px;
 }
 
 .h-100-v {
@@ -1117,6 +1133,22 @@ a:focus {
   grid-template-columns: repeat(1, 1fr);
 }
 
+@media only screen and (min-width: 1201px) {
+  .grid-xl-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .grid-xl-1.dsn-isotope > * {
+    width: calc(100% - var(--grid-gap, 30px));
+    max-width: calc(100% - var(--grid-gap, 30px));
+  }
+  .grid-xl-1.dsn-isotope > *:nth-of-type(n + 2) {
+    margin-top: var(--grid-gap-row, 30px);
+  }
+  .grid-xl-1.dsn-isotope > *:nth-of-type(1) {
+    margin-top: 0;
+  }
+}
+
 @media only screen and (min-width: 992px) {
   .grid-lg-1 {
     grid-template-columns: repeat(1, 1fr);
@@ -1179,6 +1211,22 @@ a:focus {
 
 .grid-2 {
   grid-template-columns: repeat(2, 1fr);
+}
+
+@media only screen and (min-width: 1201px) {
+  .grid-xl-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-xl-2.dsn-isotope > * {
+    width: calc(50% - var(--grid-gap, 30px));
+    max-width: calc(50% - var(--grid-gap, 30px));
+  }
+  .grid-xl-2.dsn-isotope > *:nth-of-type(n + 3) {
+    margin-top: var(--grid-gap-row, 30px);
+  }
+  .grid-xl-2.dsn-isotope > *:nth-of-type(2) {
+    margin-top: 0;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -1245,6 +1293,22 @@ a:focus {
   grid-template-columns: repeat(3, 1fr);
 }
 
+@media only screen and (min-width: 1201px) {
+  .grid-xl-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid-xl-3.dsn-isotope > * {
+    width: calc(33.3333333333% - var(--grid-gap, 30px));
+    max-width: calc(33.3333333333% - var(--grid-gap, 30px));
+  }
+  .grid-xl-3.dsn-isotope > *:nth-of-type(n + 4) {
+    margin-top: var(--grid-gap-row, 30px);
+  }
+  .grid-xl-3.dsn-isotope > *:nth-of-type(3) {
+    margin-top: 0;
+  }
+}
+
 @media only screen and (min-width: 992px) {
   .grid-lg-3 {
     grid-template-columns: repeat(3, 1fr);
@@ -1309,6 +1373,22 @@ a:focus {
   grid-template-columns: repeat(4, 1fr);
 }
 
+@media only screen and (min-width: 1201px) {
+  .grid-xl-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grid-xl-4.dsn-isotope > * {
+    width: calc(25% - var(--grid-gap, 30px));
+    max-width: calc(25% - var(--grid-gap, 30px));
+  }
+  .grid-xl-4.dsn-isotope > *:nth-of-type(n + 5) {
+    margin-top: var(--grid-gap-row, 30px);
+  }
+  .grid-xl-4.dsn-isotope > *:nth-of-type(4) {
+    margin-top: 0;
+  }
+}
+
 @media only screen and (min-width: 992px) {
   .grid-lg-4 {
     grid-template-columns: repeat(4, 1fr);
@@ -1371,6 +1451,22 @@ a:focus {
 
 .grid-5 {
   grid-template-columns: repeat(5, 1fr);
+}
+
+@media only screen and (min-width: 1201px) {
+  .grid-xl-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .grid-xl-5.dsn-isotope > * {
+    width: calc(20% - var(--grid-gap, 30px));
+    max-width: calc(20% - var(--grid-gap, 30px));
+  }
+  .grid-xl-5.dsn-isotope > *:nth-of-type(n + 6) {
+    margin-top: var(--grid-gap-row, 30px);
+  }
+  .grid-xl-5.dsn-isotope > *:nth-of-type(5) {
+    margin-top: 0;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -2656,6 +2752,10 @@ a:focus {
 
 .fz-14 {
   font-size: 14px;
+}
+
+.fz-22 {
+  font-size: 22px;
 }
 
 .fz-35 {

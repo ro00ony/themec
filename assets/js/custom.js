@@ -171,22 +171,45 @@ const dsnParam = {
 
   function accordion($el = $(document)) {
     $el.find(".dsn-accordion").each(function () {
-      const $this = $(this),
+        const $this = $(this),
             acc_q = $this.find(".accordion__question");
-      acc_q.on("click", function () {
-        const content = $(this).next();
-        $this.find(".accordion__answer").not(content).slideUp(400);
-        acc_q.not(this).removeClass("expanded");
-        $(this).toggleClass("expanded");
-        $this.find('.accordion__item').removeClass("active");
-        if ($(this).hasClass('expanded')) $(this).parents('.accordion__item').addClass("active");
-        content.slideToggle(400);
-      });
-      dsnGrid.killAjax(function () {
-        acc_q.off('click');
-      });
+
+        acc_q.on("click", function () {
+            const content = $(this).next();
+            const parentItem = $(this).parents('.accordion__item');
+
+            // إغلاق جميع الإجابات وإزالة الكلاس "active" من جميع العناصر
+            $this.find(".accordion__answer").not(content).slideUp(400);
+            $this.find(".accordion__item").not(parentItem).removeClass("active");
+            acc_q.not(this).removeClass("expanded");
+
+            // تبديل الكلاس "expanded" وحالة العنصر الحالي
+            $(this).toggleClass("expanded");
+            content.slideToggle(400);
+
+            // إذا كان العنصر مفتوحًا، إضافة الكلاس "active"، وإذا أغلق يتم إزالته
+            if ($(this).hasClass('expanded')) {
+                parentItem.addClass("active");
+            } else {
+                parentItem.removeClass("active");
+            }
+        });
+
+        // التأكد من أن العنصر الأول يعمل بشكل صحيح
+        $this.find('.accordion__item.active .accordion__question').each(function () {
+            const content = $(this).next();
+            if (!$(this).hasClass('expanded')) {
+                $(this).addClass('expanded');
+                content.show();
+            }
+        });
+
+        // تنظيف الأحداث عند استخدام killAjax
+        dsnGrid.killAjax(function () {
+            acc_q.off('click');
+        });
     });
-  }
+}
   /**
    *
    * @param $el
@@ -999,6 +1022,10 @@ const dsnParam = {
             575: {
               slidesPerView: 2,
               spaceBetween: 10
+            },
+            300: {
+              slidesPerView: 1,
+              spaceBetween: 5
             }
           };
 

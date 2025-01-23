@@ -28,6 +28,9 @@ $path_font: './fonts/';
 .text-upper {
   text-transform: uppercase;
 }
+.text-capitalize {
+  text-transform: capitalize;
+}
 
 .fw-bold {
   font-weight: bold;
@@ -85,6 +88,12 @@ $path_font: './fonts/';
   background-color: $heading-color;
   color: $bg-color;
 }
+.bg-graident {
+  background: linear-gradient(to right, #29A9E1, #F68722, #F9CD18);
+}
+.bg-white {
+  background: #fff;
+}
 
 .theme-color {
   color: $theme-color;
@@ -100,6 +109,9 @@ $path_font: './fonts/';
 
 .background-transparent {
   background-color: transparent;
+}
+.w-50p {
+  width: 50px;
 }
 
 .h-100-v {
@@ -323,6 +335,9 @@ $path_font: './fonts/';
 }
 .fz-14 {
   font-size: 14px;
+}
+.fz-22 {
+  font-size: 22px;
 }
 .fz-35 {
   font-size: 35px;

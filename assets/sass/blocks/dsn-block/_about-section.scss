@@ -328,7 +328,7 @@
       }
     }
   }
-
+  
   .box-text {
     .info {
       .info-item {
@@ -432,12 +432,13 @@
   }
 }
 
+// About Page 
+
 .about-has-image {
   .box-img {
     display: grid;
     gap: 5px;
     grid-row-gap: 20px;
-
     .img-inner {
       &:first-of-type {
         aspect-ratio: 2 / 3;
@@ -451,7 +452,7 @@
         grid-column-start: 6;
         aspect-ratio: 3 / 2;
 
-        @include media_575 {
+        @include media_768 {
           display: none;
         }
       }
@@ -460,19 +461,87 @@
         aspect-ratio: 1 / 1;
         grid-column-start: 6;
 
-        @include media_575 {
+        @include media_768 {
           display: none;
         }
       }
     }
   }
+}
 
-  .box-text {
-    @include media_991 {
-      padding: 0;
+.about-hero {
+  .grid-half-1 {
+    @include media_768X991 {
+      grid-template-columns: auto 60%;
     }
   }
+  .box-text {
+    background: white;
+    border-radius: 15px;
+    padding: 60px 20px;
+    box-shadow: $box-shadow;
+    @include media_768 {
+      padding: 40px 15px;
+    }
+    
+    &.main {
+      @include media_768 {
+        &.main {
+          .section-title {
+            text-align: center;
+          }
+        }
+      }
+      @include media_575 {
+        .section-title {
+          .title {
+            font-size: 28px;
+          }
+        }
+      }
+    }
 
+    &:not(.main) {
+      .top-icon {
+        img {
+          width: 64px;
+          height: 64px;
+        }
+      }
+      @include media_575 {
+        padding: 30px 10px;
+      }
+
+    }
+
+  }
+}
+
+.pos-narrative {
+  .box-item {
+    background: #F3F3F3;
+    border-radius: 15px;
+    padding: 40px 20px;
+    opacity: 0.1;
+    &:hover {
+      opacity: 1 !important;
+    }
+    &:last-child {
+        position: relative;
+        opacity: 1;
+        .current-way {
+          position: absolute;
+          width: 100px;
+          height: 30px;
+          text-align: center;
+          line-height: 30px;
+          color: white;
+          border-radius: 15px;
+          left: 15px;
+          top: 15px;
+        }
+    }
+  }
 }
 
 .seat-section-ar {

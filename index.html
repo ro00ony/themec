@@ -109,24 +109,21 @@
                             <span class="overflow ">Home</span>
                         </a>
                     </li>
-
+                    <li class="nav-item ">
+                        <a title="About" href="about.html">
+                            <span class="overflow">About</span>
+                        </a>
+                    </li> 
                     <li class="nav-item has-sub-menu">
                         <a title="Home" href="videos.html">
                             <span class="overflow ">Videos</span>
                         </a>
                     </li>
-
-                    <!-- <li class="nav-item has-sub-menu">
-                        <a title="Home" href="#0">
-                            <span class="overflow ">Portfolio</span>
+                    <li class="nav-item has-sub-menu">
+                        <a title="Home" href="blog.html">
+                            <span class="overflow ">Blog</span>
                         </a>
                     </li>
-
-                    <li class="nav-item ">
-                        <a title="About" href="#0">
-                            <span class="overflow">About</span>
-                        </a>
-                    </li> -->
                     <li class="nav-item ">
                         <a title="Contact" href="contact.html">
                             <span class="overflow">Contact</span>
@@ -305,6 +302,42 @@
                     </div>
                 </section>
                 <!-- ========== End Latest work ========== -->
+
+                <!-- ========== Process ========== -->
+                <section class="our-process section-padding">
+                    <div class="container">
+                        <div class="section-title dsn-fill d-flex flex-column mb-50">
+                            <h2 class="title ">Our Process</h2>
+                            <p class="mt-20">
+                                We always follow the same series of steps to make our videos, no matter what techniques we use or how complex it will be.
+                            </p>
+                        </div>
+                        <div class="content d-grid grid-1 grid-sm-2 grid-lg-3">
+                            <div class="card">
+                                <img src="assets/img/process/script.jpg" alt="Scriptwriting-img">
+                                <h3>Scriptwriting</h3>
+                              </div>
+                              <div class="card">
+                                <img src="assets/img/process/boarding.jpg" alt="Storyboarding-img">
+                                <h3>Storyboarding</h3>
+                              </div>
+                              <div class="card">
+                                <img src="assets/img/process/design.jpg" alt="Designing-img">
+                                <h3>Designing</h3>
+                              </div>
+                              <div class="card">
+                                <img src="assets/img/process/animation.gif" alt="Animation-img">
+                                <h3>Animation</h3>
+                              </div>
+                              <div class="card">
+                                <img src="assets/img/process/music.jpg" alt="Music-img">
+                                <h3>Music</h3>
+                              </div>
+                        </div>
+                      </div>
+                      
+                </section>
+                <!-- ========== End Process ========== -->
                  
                 <!-- ========== Services ========== -->
                 <section class="services-secttion section-padding">
@@ -318,8 +351,8 @@
                         <div class="ggi">
                             <h3>CGI  & VFX</h3>
                             <div class="dsn-swiper"
-                                data-dsn-option='{"spaceBetween":15,"centeredSlides":false,"direction":"horizontal","autoHeight":false,"slideToClickedSlide":false,"grabCursor":true,"mousewheel":false,"loop":true,"parallax":false,"slidesPerGroup":1,"slidesPerView":3,"speed":1000,"effect":"slide"}'>
-                                <div class="d-flex dsn-paginate justify-content-end pb-20">
+                            data-dsn-option='{"spaceBetween":15,"centeredSlides":false,"direction":"horizontal","autoHeight":false,"slideToClickedSlide":false,"grabCursor":true,"mousewheel":false,"loop":true,"parallax":false,"slidesPerGroup":1,"slidesPerView":3,"speed":1000,"effect":"slide"}'>
+                                <div class="dsn-paginate d-flex justify-content-end pb-20">
                                     <div class="prev-paginate dsn-slid-normal two">
                                         <span class="dsn-icon dsn-icon-heading-color">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15"
@@ -344,25 +377,61 @@
                                 </div>
                                 <div class="swiper-container swiper">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-1.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-1.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
                                     
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-2.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-2.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eligendi nulla eos tempora fugit repudiandae.</p>
+                                            </div>
                                         </div>
                                     
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -376,8 +445,8 @@
                         <div class="3d mt-50">
                             <h3>3D modeling</h3>
                             <div class="dsn-swiper"
-                                data-dsn-option='{"spaceBetween":15,"centeredSlides":false,"direction":"horizontal","autoHeight":false,"slideToClickedSlide":false,"grabCursor":true,"mousewheel":false,"loop":true,"parallax":false,"slidesPerGroup":1,"slidesPerView":3,"speed":1000,"effect":"slide"}'>
-                                <div class="d-flex dsn-paginate justify-content-end pb-20">
+                            data-dsn-option='{"spaceBetween":15,"centeredSlides":false,"direction":"horizontal","autoHeight":false,"slideToClickedSlide":false,"grabCursor":true,"mousewheel":false,"loop":true,"parallax":false,"slidesPerGroup":1,"slidesPerView":3,"speed":1000,"effect":"slide"}'>
+                                <div class="dsn-paginate d-flex justify-content-end pb-20">
                                     <div class="prev-paginate dsn-slid-normal two">
                                         <span class="dsn-icon dsn-icon-heading-color">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15"
@@ -402,25 +471,61 @@
                                 </div>
                                 <div class="swiper-container swiper">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-1.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-1.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
                                     
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-2.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-2.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eligendi nulla eos tempora fugit repudiandae.</p>
+                                            </div>
                                         </div>
                                     
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -435,8 +540,8 @@
                         <div class="animation mt-50">
                             <h3>Animation</h3>
                             <div class="dsn-swiper"
-                                data-dsn-option='{"spaceBetween":15,"centeredSlides":false,"direction":"horizontal","autoHeight":false,"slideToClickedSlide":false,"grabCursor":true,"mousewheel":false,"loop":true,"parallax":false,"slidesPerGroup":1,"slidesPerView":3,"speed":1000,"effect":"slide"}'>
-                                <div class="d-flex dsn-paginate justify-content-end pb-20">
+                            data-dsn-option='{"spaceBetween":15,"centeredSlides":false,"direction":"horizontal","autoHeight":false,"slideToClickedSlide":false,"grabCursor":true,"mousewheel":false,"loop":true,"parallax":false,"slidesPerGroup":1,"slidesPerView":3,"speed":1000,"effect":"slide"}'>
+                                <div class="dsn-paginate d-flex justify-content-end pb-20">
                                     <div class="prev-paginate dsn-slid-normal two">
                                         <span class="dsn-icon dsn-icon-heading-color">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15"
@@ -461,25 +566,61 @@
                                 </div>
                                 <div class="swiper-container swiper">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-1.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-1.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
                                     
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-2.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-2.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eligendi nulla eos tempora fugit repudiandae.</p>
+                                            </div>
                                         </div>
                                     
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -494,8 +635,8 @@
                         <div class="marketing mt-50">
                             <h3>AR marketing</h3>
                             <div class="dsn-swiper"
-                                data-dsn-option='{"spaceBetween":15,"centeredSlides":false,"direction":"horizontal","autoHeight":false,"slideToClickedSlide":false,"grabCursor":true,"mousewheel":false,"loop":true,"parallax":false,"slidesPerGroup":1,"slidesPerView":3,"speed":1000,"effect":"slide"}'>
-                                <div class="d-flex dsn-paginate justify-content-end pb-20">
+                            data-dsn-option='{"spaceBetween":15,"centeredSlides":false,"direction":"horizontal","autoHeight":false,"slideToClickedSlide":false,"grabCursor":true,"mousewheel":false,"loop":true,"parallax":false,"slidesPerGroup":1,"slidesPerView":3,"speed":1000,"effect":"slide"}'>
+                                <div class="dsn-paginate d-flex justify-content-end pb-20">
                                     <div class="prev-paginate dsn-slid-normal two">
                                         <span class="dsn-icon dsn-icon-heading-color">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15"
@@ -520,25 +661,61 @@
                                 </div>
                                 <div class="swiper-container swiper">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-1.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-1.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
                                     
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-2.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-2.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eligendi nulla eos tempora fugit repudiandae.</p>
+                                            </div>
                                         </div>
                                     
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -553,8 +730,8 @@
                         <div class="ai mt-50">
                             <h3>AI</h3>
                             <div class="dsn-swiper"
-                                data-dsn-option='{"spaceBetween":15,"centeredSlides":false,"direction":"horizontal","autoHeight":false,"slideToClickedSlide":false,"grabCursor":true,"mousewheel":false,"loop":true,"parallax":false,"slidesPerGroup":1,"slidesPerView":3,"speed":1000,"effect":"slide"}'>
-                                <div class="d-flex dsn-paginate justify-content-end pb-20">
+                            data-dsn-option='{"spaceBetween":15,"centeredSlides":false,"direction":"horizontal","autoHeight":false,"slideToClickedSlide":false,"grabCursor":true,"mousewheel":false,"loop":true,"parallax":false,"slidesPerGroup":1,"slidesPerView":3,"speed":1000,"effect":"slide"}'>
+                                <div class="dsn-paginate d-flex justify-content-end pb-20">
                                     <div class="prev-paginate dsn-slid-normal two">
                                         <span class="dsn-icon dsn-icon-heading-color">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15"
@@ -579,25 +756,61 @@
                                 </div>
                                 <div class="swiper-container swiper">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-1.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-1.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
                                     
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-2.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-2.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eligendi nulla eos tempora fugit repudiandae.</p>
+                                            </div>
                                         </div>
                                     
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -612,8 +825,8 @@
                         <div class="content-creation mt-50">
                             <h3>Content creation</h3>
                             <div class="dsn-swiper"
-                                data-dsn-option='{"spaceBetween":15,"centeredSlides":false,"direction":"horizontal","autoHeight":false,"slideToClickedSlide":false,"grabCursor":true,"mousewheel":false,"loop":true,"parallax":false,"slidesPerGroup":1,"slidesPerView":3,"speed":1000,"effect":"slide"}'>
-                                <div class="d-flex dsn-paginate justify-content-end pb-20">
+                            data-dsn-option='{"spaceBetween":15,"centeredSlides":false,"direction":"horizontal","autoHeight":false,"slideToClickedSlide":false,"grabCursor":true,"mousewheel":false,"loop":true,"parallax":false,"slidesPerGroup":1,"slidesPerView":3,"speed":1000,"effect":"slide"}'>
+                                <div class="dsn-paginate d-flex justify-content-end pb-20">
                                     <div class="prev-paginate dsn-slid-normal two">
                                         <span class="dsn-icon dsn-icon-heading-color">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15"
@@ -636,27 +849,64 @@
                                         </span>
                                     </div>
                                 </div>
+
                                 <div class="swiper-container swiper">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-1.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-1.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
                                     
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-2.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-2.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eligendi nulla eos tempora fugit repudiandae.</p>
+                                            </div>
                                         </div>
                                     
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
-                                        <div class="swiper-slide box-video second-radius">
-                                            <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius"muted autoplay loop></video>
+                                        <div class="swiper-slide box second-radius">
+                                            <div class="box-video">
+                                                <video src="assets/videos/latest-work/video-3.mp4" class="cover-bg-vid second-radius" muted autoplay loop></video>
+                                            </div>
+                                            <div class="box-info">
+                                                <h6>Video Title</h6>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -679,93 +929,13 @@
                 </section>
                 <!-- ========== End Services ========== -->
 
-                <!-- ========== Core Value ========== -->
-                <section class="dsn-values pt-0 pb-100">
-                    <div class="container">
-                        <div class="section-title dsn-fill mb-50 d-flex flex-column">
-                            <h2 class="title ">CORE VALUES</h2>
-                        </div>
-                    </div>
-
-                    <div class="container">
-                        <div class="services-inner">
-                            <div class="d-grid grid-sm-2 grid-md-3" style="gap: 10px; --grid-gap: 10px;">
-
-                                <div class="values-item background-section">
-                                    <h3 class="text-upper">Innovation</h3>
-                                    <div class="icon-right">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 61" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M27 8.5V26.5C27 30.0898 24.0899 33 20.5 33C16.9102 33 14 30.0899 14 26.5V8.5C14 4.91015 16.9102 2 20.5 2C24.0899 2 27 4.91015 27 8.5ZM12 8.5C12 3.80558 15.8056 0 20.5 0C25.1944 0 29 3.80558 29 8.5V26.5C29 31.1944 25.1944 35 20.5 35C15.8056 35 12 31.1944 12 26.5V8.5ZM41.5 22C44.5376 22 47 19.5376 47 16.5C47 13.4624 44.5376 11 41.5 11C38.4624 11 36 13.4624 36 16.5C36 19.5376 38.4624 22 41.5 22ZM41.5 24C45.6421 24 49 20.6421 49 16.5C49 12.3579 45.6421 9 41.5 9C37.3579 9 34 12.3579 34 16.5C34 20.6421 37.3579 24 41.5 24ZM42.8632 58.6403C39.1021 60.1982 35.071 61 31 61C26.929 61 22.8979 60.1982 19.1368 58.6403C15.3757 57.0824 11.9583 54.7989 9.07968 51.9203C6.20107 49.0417 3.91763 45.6243 2.35973 41.8632C0.801836 38.1021 0 34.071 0 30V29H0.999999L7.5 29L7.5 31L2.01725 31C2.13687 34.4672 2.87779 37.8876 4.20749 41.0978C5.66487 44.6163 7.801 47.8132 10.4939 50.5061C13.1868 53.199 16.3837 55.3351 19.9022 56.7925C23.4206 58.2499 27.1917 59 31 59C34.8083 59 38.5794 58.2499 42.0978 56.7925C45.6163 55.3351 48.8132 53.199 51.5061 50.5061C54.199 47.8132 56.3351 44.6163 57.7925 41.0978C59.1222 37.8877 59.8631 34.4672 59.9828 31L33.5 31V29L61 29H62V30C62 34.071 61.1982 38.1021 59.6403 41.8632C58.0824 45.6243 55.7989 49.0417 52.9203 51.9203C50.0417 54.7989 46.6243 57.0824 42.8632 58.6403Z" fill="#121212"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-
-                                <div class="values-item background-section">
-                                    <h3 class="text-upper">Collaboration</h3>
-                                    <div class="icon-right">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 61" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M27 8.5V26.5C27 30.0898 24.0899 33 20.5 33C16.9102 33 14 30.0899 14 26.5V8.5C14 4.91015 16.9102 2 20.5 2C24.0899 2 27 4.91015 27 8.5ZM12 8.5C12 3.80558 15.8056 0 20.5 0C25.1944 0 29 3.80558 29 8.5V26.5C29 31.1944 25.1944 35 20.5 35C15.8056 35 12 31.1944 12 26.5V8.5ZM41.5 22C44.5376 22 47 19.5376 47 16.5C47 13.4624 44.5376 11 41.5 11C38.4624 11 36 13.4624 36 16.5C36 19.5376 38.4624 22 41.5 22ZM41.5 24C45.6421 24 49 20.6421 49 16.5C49 12.3579 45.6421 9 41.5 9C37.3579 9 34 12.3579 34 16.5C34 20.6421 37.3579 24 41.5 24ZM42.8632 58.6403C39.1021 60.1982 35.071 61 31 61C26.929 61 22.8979 60.1982 19.1368 58.6403C15.3757 57.0824 11.9583 54.7989 9.07968 51.9203C6.20107 49.0417 3.91763 45.6243 2.35973 41.8632C0.801836 38.1021 0 34.071 0 30V29H0.999999L7.5 29L7.5 31L2.01725 31C2.13687 34.4672 2.87779 37.8876 4.20749 41.0978C5.66487 44.6163 7.801 47.8132 10.4939 50.5061C13.1868 53.199 16.3837 55.3351 19.9022 56.7925C23.4206 58.2499 27.1917 59 31 59C34.8083 59 38.5794 58.2499 42.0978 56.7925C45.6163 55.3351 48.8132 53.199 51.5061 50.5061C54.199 47.8132 56.3351 44.6163 57.7925 41.0978C59.1222 37.8877 59.8631 34.4672 59.9828 31L33.5 31V29L61 29H62V30C62 34.071 61.1982 38.1021 59.6403 41.8632C58.0824 45.6243 55.7989 49.0417 52.9203 51.9203C50.0417 54.7989 46.6243 57.0824 42.8632 58.6403Z" fill="#121212"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-
-                                <div class="values-item background-section">
-                                    <h3 class="text-upper">Excellence</h3>
-                                    <div class="icon-right">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 61" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M27 8.5V26.5C27 30.0898 24.0899 33 20.5 33C16.9102 33 14 30.0899 14 26.5V8.5C14 4.91015 16.9102 2 20.5 2C24.0899 2 27 4.91015 27 8.5ZM12 8.5C12 3.80558 15.8056 0 20.5 0C25.1944 0 29 3.80558 29 8.5V26.5C29 31.1944 25.1944 35 20.5 35C15.8056 35 12 31.1944 12 26.5V8.5ZM41.5 22C44.5376 22 47 19.5376 47 16.5C47 13.4624 44.5376 11 41.5 11C38.4624 11 36 13.4624 36 16.5C36 19.5376 38.4624 22 41.5 22ZM41.5 24C45.6421 24 49 20.6421 49 16.5C49 12.3579 45.6421 9 41.5 9C37.3579 9 34 12.3579 34 16.5C34 20.6421 37.3579 24 41.5 24ZM42.8632 58.6403C39.1021 60.1982 35.071 61 31 61C26.929 61 22.8979 60.1982 19.1368 58.6403C15.3757 57.0824 11.9583 54.7989 9.07968 51.9203C6.20107 49.0417 3.91763 45.6243 2.35973 41.8632C0.801836 38.1021 0 34.071 0 30V29H0.999999L7.5 29L7.5 31L2.01725 31C2.13687 34.4672 2.87779 37.8876 4.20749 41.0978C5.66487 44.6163 7.801 47.8132 10.4939 50.5061C13.1868 53.199 16.3837 55.3351 19.9022 56.7925C23.4206 58.2499 27.1917 59 31 59C34.8083 59 38.5794 58.2499 42.0978 56.7925C45.6163 55.3351 48.8132 53.199 51.5061 50.5061C54.199 47.8132 56.3351 44.6163 57.7925 41.0978C59.1222 37.8877 59.8631 34.4672 59.9828 31L33.5 31V29L61 29H62V30C62 34.071 61.1982 38.1021 59.6403 41.8632C58.0824 45.6243 55.7989 49.0417 52.9203 51.9203C50.0417 54.7989 46.6243 57.0824 42.8632 58.6403Z" fill="#121212"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-
-                                <div class="values-item background-section">
-                                    <h3 class="text-upper">Integrity</h3>
-                                    <div class="icon-right">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 61" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M27 8.5V26.5C27 30.0898 24.0899 33 20.5 33C16.9102 33 14 30.0899 14 26.5V8.5C14 4.91015 16.9102 2 20.5 2C24.0899 2 27 4.91015 27 8.5ZM12 8.5C12 3.80558 15.8056 0 20.5 0C25.1944 0 29 3.80558 29 8.5V26.5C29 31.1944 25.1944 35 20.5 35C15.8056 35 12 31.1944 12 26.5V8.5ZM41.5 22C44.5376 22 47 19.5376 47 16.5C47 13.4624 44.5376 11 41.5 11C38.4624 11 36 13.4624 36 16.5C36 19.5376 38.4624 22 41.5 22ZM41.5 24C45.6421 24 49 20.6421 49 16.5C49 12.3579 45.6421 9 41.5 9C37.3579 9 34 12.3579 34 16.5C34 20.6421 37.3579 24 41.5 24ZM42.8632 58.6403C39.1021 60.1982 35.071 61 31 61C26.929 61 22.8979 60.1982 19.1368 58.6403C15.3757 57.0824 11.9583 54.7989 9.07968 51.9203C6.20107 49.0417 3.91763 45.6243 2.35973 41.8632C0.801836 38.1021 0 34.071 0 30V29H0.999999L7.5 29L7.5 31L2.01725 31C2.13687 34.4672 2.87779 37.8876 4.20749 41.0978C5.66487 44.6163 7.801 47.8132 10.4939 50.5061C13.1868 53.199 16.3837 55.3351 19.9022 56.7925C23.4206 58.2499 27.1917 59 31 59C34.8083 59 38.5794 58.2499 42.0978 56.7925C45.6163 55.3351 48.8132 53.199 51.5061 50.5061C54.199 47.8132 56.3351 44.6163 57.7925 41.0978C59.1222 37.8877 59.8631 34.4672 59.9828 31L33.5 31V29L61 29H62V30C62 34.071 61.1982 38.1021 59.6403 41.8632C58.0824 45.6243 55.7989 49.0417 52.9203 51.9203C50.0417 54.7989 46.6243 57.0824 42.8632 58.6403Z" fill="#121212"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-
-                                <div class="values-item background-section">
-                                    <h3 class="text-upper">Adaptability</h3>
-                                    <div class="icon-right">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 61" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M27 8.5V26.5C27 30.0898 24.0899 33 20.5 33C16.9102 33 14 30.0899 14 26.5V8.5C14 4.91015 16.9102 2 20.5 2C24.0899 2 27 4.91015 27 8.5ZM12 8.5C12 3.80558 15.8056 0 20.5 0C25.1944 0 29 3.80558 29 8.5V26.5C29 31.1944 25.1944 35 20.5 35C15.8056 35 12 31.1944 12 26.5V8.5ZM41.5 22C44.5376 22 47 19.5376 47 16.5C47 13.4624 44.5376 11 41.5 11C38.4624 11 36 13.4624 36 16.5C36 19.5376 38.4624 22 41.5 22ZM41.5 24C45.6421 24 49 20.6421 49 16.5C49 12.3579 45.6421 9 41.5 9C37.3579 9 34 12.3579 34 16.5C34 20.6421 37.3579 24 41.5 24ZM42.8632 58.6403C39.1021 60.1982 35.071 61 31 61C26.929 61 22.8979 60.1982 19.1368 58.6403C15.3757 57.0824 11.9583 54.7989 9.07968 51.9203C6.20107 49.0417 3.91763 45.6243 2.35973 41.8632C0.801836 38.1021 0 34.071 0 30V29H0.999999L7.5 29L7.5 31L2.01725 31C2.13687 34.4672 2.87779 37.8876 4.20749 41.0978C5.66487 44.6163 7.801 47.8132 10.4939 50.5061C13.1868 53.199 16.3837 55.3351 19.9022 56.7925C23.4206 58.2499 27.1917 59 31 59C34.8083 59 38.5794 58.2499 42.0978 56.7925C45.6163 55.3351 48.8132 53.199 51.5061 50.5061C54.199 47.8132 56.3351 44.6163 57.7925 41.0978C59.1222 37.8877 59.8631 34.4672 59.9828 31L33.5 31V29L61 29H62V30C62 34.071 61.1982 38.1021 59.6403 41.8632C58.0824 45.6243 55.7989 49.0417 52.9203 51.9203C50.0417 54.7989 46.6243 57.0824 42.8632 58.6403Z" fill="#121212"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-
-                                <div class="values-item background-section">
-                                    <h3 class="text-upper">Continuous Learning</h3>
-                                    <div class="icon-right">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 61" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M27 8.5V26.5C27 30.0898 24.0899 33 20.5 33C16.9102 33 14 30.0899 14 26.5V8.5C14 4.91015 16.9102 2 20.5 2C24.0899 2 27 4.91015 27 8.5ZM12 8.5C12 3.80558 15.8056 0 20.5 0C25.1944 0 29 3.80558 29 8.5V26.5C29 31.1944 25.1944 35 20.5 35C15.8056 35 12 31.1944 12 26.5V8.5ZM41.5 22C44.5376 22 47 19.5376 47 16.5C47 13.4624 44.5376 11 41.5 11C38.4624 11 36 13.4624 36 16.5C36 19.5376 38.4624 22 41.5 22ZM41.5 24C45.6421 24 49 20.6421 49 16.5C49 12.3579 45.6421 9 41.5 9C37.3579 9 34 12.3579 34 16.5C34 20.6421 37.3579 24 41.5 24ZM42.8632 58.6403C39.1021 60.1982 35.071 61 31 61C26.929 61 22.8979 60.1982 19.1368 58.6403C15.3757 57.0824 11.9583 54.7989 9.07968 51.9203C6.20107 49.0417 3.91763 45.6243 2.35973 41.8632C0.801836 38.1021 0 34.071 0 30V29H0.999999L7.5 29L7.5 31L2.01725 31C2.13687 34.4672 2.87779 37.8876 4.20749 41.0978C5.66487 44.6163 7.801 47.8132 10.4939 50.5061C13.1868 53.199 16.3837 55.3351 19.9022 56.7925C23.4206 58.2499 27.1917 59 31 59C34.8083 59 38.5794 58.2499 42.0978 56.7925C45.6163 55.3351 48.8132 53.199 51.5061 50.5061C54.199 47.8132 56.3351 44.6163 57.7925 41.0978C59.1222 37.8877 59.8631 34.4672 59.9828 31L33.5 31V29L61 29H62V30C62 34.071 61.1982 38.1021 59.6403 41.8632C58.0824 45.6243 55.7989 49.0417 52.9203 51.9203C50.0417 54.7989 46.6243 57.0824 42.8632 58.6403Z" fill="#121212"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-
-                                <div class="values-item background-section">
-                                    <h3 class="text-upper">Customer-Centricity</h3>
-                                    <div class="icon-right">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 61" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M27 8.5V26.5C27 30.0898 24.0899 33 20.5 33C16.9102 33 14 30.0899 14 26.5V8.5C14 4.91015 16.9102 2 20.5 2C24.0899 2 27 4.91015 27 8.5ZM12 8.5C12 3.80558 15.8056 0 20.5 0C25.1944 0 29 3.80558 29 8.5V26.5C29 31.1944 25.1944 35 20.5 35C15.8056 35 12 31.1944 12 26.5V8.5ZM41.5 22C44.5376 22 47 19.5376 47 16.5C47 13.4624 44.5376 11 41.5 11C38.4624 11 36 13.4624 36 16.5C36 19.5376 38.4624 22 41.5 22ZM41.5 24C45.6421 24 49 20.6421 49 16.5C49 12.3579 45.6421 9 41.5 9C37.3579 9 34 12.3579 34 16.5C34 20.6421 37.3579 24 41.5 24ZM42.8632 58.6403C39.1021 60.1982 35.071 61 31 61C26.929 61 22.8979 60.1982 19.1368 58.6403C15.3757 57.0824 11.9583 54.7989 9.07968 51.9203C6.20107 49.0417 3.91763 45.6243 2.35973 41.8632C0.801836 38.1021 0 34.071 0 30V29H0.999999L7.5 29L7.5 31L2.01725 31C2.13687 34.4672 2.87779 37.8876 4.20749 41.0978C5.66487 44.6163 7.801 47.8132 10.4939 50.5061C13.1868 53.199 16.3837 55.3351 19.9022 56.7925C23.4206 58.2499 27.1917 59 31 59C34.8083 59 38.5794 58.2499 42.0978 56.7925C45.6163 55.3351 48.8132 53.199 51.5061 50.5061C54.199 47.8132 56.3351 44.6163 57.7925 41.0978C59.1222 37.8877 59.8631 34.4672 59.9828 31L33.5 31V29L61 29H62V30C62 34.071 61.1982 38.1021 59.6403 41.8632C58.0824 45.6243 55.7989 49.0417 52.9203 51.9203C50.0417 54.7989 46.6243 57.0824 42.8632 58.6403Z" fill="#121212"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- ========== End Core Value ========== -->
-
-                <!-- ========== Paretner ========== -->
-                <div class="dsn-paretner p-relative section-padding background-section dsn-skew-scroll">
+                <!-- ========== clients ========== -->
+                <div class="dsn-clients p-relative section-padding background-section dsn-skew-scroll">
                     <div class="p-absolute top-0 left-0 bottom-0 w-100 h-100">
                         <div class="img-box-parallax before-z-index w-100 h-100 p-absolute top-0 bottom-0 left-0"
-                            data-overlay="7" data-dsn-grid="move-up">
-                            <img src="assets/img/bg.PNG"
-                                class="has-bigger-scale cover-bg-img has-direction" alt="">
+                            data-dsn-grid="move-up">
+                            <img class="has-bigger-scale cover-bg-img has-direction"
+                             src="assets/img/main-shape.png" alt="">
                         </div>
                     </div>
                     <div class="info text-center p-relative pb-50">
@@ -773,38 +943,38 @@
                         <h4>We’ve worked with great clients<br> Can’t wait to put your logo with them.</h4>
                     </div>
                     <div class="container">
-                        <div class="paretner-inner d-grid align-items-center p-relative z-index-1">
+                        <div class="clients-inner d-grid align-items-center p-relative z-index-1">
 
-                            <div class="paretner-boxs d-grid grid-2 grid-sm-3 grid-md-4 grid-lg-5 ">
-                                <div class="paretner-item">
+                            <div class="clients-boxes d-grid grid-2 grid-sm-3 grid-md-4 grid-lg-5 ">
+                                <div class="client-item">
                                     <img src="assets/img/partners/adams.jpg" alt="">
                                 </div>
-                                <div class="paretner-item">
+                                <div class="client-item">
                                     <img src="assets/img/partners/atyab.jpg" alt="">
                                 </div>
-                                <div class="paretner-item">
+                                <div class="client-item">
                                     <img src="assets/img/partners/boubyan.jpg" alt="">
                                 </div>
-                                <div class="paretner-item">
+                                <div class="client-item">
                                     <img src="assets/img/partners/crazy-pizza.jpg" alt="">
                                 </div>
     
-                                <div class="paretner-item">
+                                <div class="client-item">
                                     <img src="assets/img/partners/deboned.jpg" alt="">
                                 </div>
-                                <div class="paretner-item">
+                                <div class="client-item">
                                     <img src="assets/img/partners/felice.jpg" alt="">
                                 </div>
-                                <div class="paretner-item">
+                                <div class="client-item">
                                     <img src="assets/img/partners/fox.jpg" alt="">
                                 </div>
-                                <div class="paretner-item">
+                                <div class="client-item">
                                     <img src="assets/img/partners/high-ed.jpg" alt="">
                                 </div>
-                                <div class="paretner-item">
+                                <div class="client-item">
                                     <img src="assets/img/partners/qortuba.jpg" alt="">
                                 </div>
-                                <div class="paretner-item">
+                                <div class="client-item">
                                     <img src="assets/img/partners/Regal-honey.jpg" alt="">
                                 </div>
                             </div>
@@ -812,7 +982,76 @@
                         </div>
                     </div>
                 </div>
-                <!-- ========== End Paretner ========== -->
+                <!-- ========== End clients ========== -->
+
+                <!-- ========== Blog ========== -->
+                <section class="blog-style dsn-cards section-padding background-section ">
+                    <div class="container">
+                        <div class="section-title main dsn-fill mb-50">
+                            <h2 class="title ">Latest Blog</h2>
+                        </div>
+
+                        <div class="dsn-posts">
+                            <div class="d-grid grid-md-2 grid-xl-3">
+                                <div class="post-item p-relative d-flex flex-column justify-content-start grid-item">
+
+                                    <div class="box-img main-radius">
+                                        <img class="cover-bg-img main-radius" src="assets/img/blog/blog-1.jpg" alt="">
+                                    </div>
+                                    <div class="content d-flex flex-column justify-content-between flex-wrap">
+                                        <div class="post-time-wrap">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 0C2.69141 0 0 2.69141 0 6C0 9.30859 2.69141 12 6 12C9.30859 12 12 9.30859 12 6C12 2.69141 9.30859 0 6 0ZM6 1C8.76758 1 11 3.23242 11 6C11 8.76758 8.76758 11 6 11C3.23242 11 1 8.76758 1 6C1 3.23242 3.23242 1 6 1ZM5.5 2V6.5H9V5.5H6.5V2H5.5Z" fill="#808080"></path>
+                                            </svg>
+                                            <span class="post-time">Jun 15, 2025</span>
+                                        </div>
+                                        <h4 class="text-upper"><a href="blog.html">Creativity Without Borders: <br>
+                                            A Journey into the World of Animated Videos</a></h4>
+                                    </div>
+                                </div>
+
+                                <div class="post-item p-relative d-flex flex-column justify-content-start grid-item">
+
+                                    <div class="box-img main-radius">
+                                        <img class="cover-bg-img main-radius" src="assets/img/blog/blog-2.jpg" alt="">
+                                    </div>
+
+                                    <div class="content d-flex flex-column justify-content-between flex-wrap">
+                                        <div class="post-time-wrap">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 0C2.69141 0 0 2.69141 0 6C0 9.30859 2.69141 12 6 12C9.30859 12 12 9.30859 12 6C12 2.69141 9.30859 0 6 0ZM6 1C8.76758 1 11 3.23242 11 6C11 8.76758 8.76758 11 6 11C3.23242 11 1 8.76758 1 6C1 3.23242 3.23242 1 6 1ZM5.5 2V6.5H9V5.5H6.5V2H5.5Z" fill="#808080"></path>
+                                            </svg>
+
+                                            <span class="post-time">Jun 15, 2025</span>
+                                        </div>
+                                        <h4 class="text-upper"><a href="blog.html">Innovation in Every Frame: <br>
+                                            The Art of Creative Video Making</a></h4>
+                                    </div>
+                                </div>
+
+                                <div class="post-item p-relative d-flex flex-column justify-content-start grid-item">
+
+                                    <div class="box-img main-radius">
+                                        <img class="cover-bg-img main-radius" src="assets/img/blog/blog-3.jpg" alt="">
+                                    </div>
+
+                                    <div class="content d-flex flex-column justify-content-between flex-wrap">
+                                        <div class="post-time-wrap">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 0C2.69141 0 0 2.69141 0 6C0 9.30859 2.69141 12 6 12C9.30859 12 12 9.30859 12 6C12 2.69141 9.30859 0 6 0ZM6 1C8.76758 1 11 3.23242 11 6C11 8.76758 8.76758 11 6 11C3.23242 11 1 8.76758 1 6C1 3.23242 3.23242 1 6 1ZM5.5 2V6.5H9V5.5H6.5V2H5.5Z" fill="#808080"></path>
+                                            </svg>
+
+                                            <span class="post-time">Jun 15, 2025</span>
+                                        </div>
+                                        <h4 class="text-upper"><a href="blog.html">From Imagination to Reality: <br>
+                                            Crafting Stunning Animated Experiences</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ========== End Blog ========== -->
 
                 <section class="next-page v-dark section-padding">
 

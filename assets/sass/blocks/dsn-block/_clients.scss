@@ -1,4 +1,4 @@
-.dsn-paretner {
+.dsn-clients {
 
   .info {
     z-index: 10;
@@ -12,9 +12,9 @@
       font-size: 18px;
     }
   }
-  .paretner-inner {
+  .clients-inner {
 
-      .paretner-item {
+      .client-item {
         aspect-ratio: 1 / 1;
         border-radius: 50%;
         width: 100%;
@@ -27,11 +27,11 @@
       }
       @include media_768 {
 
-        .paretner-boxs {
+        .clients-boxes {
           grid-column-gap: 15px;
           grid-row-gap: 15px;
 
-          .paretner-item {
+          .client-item {
             aspect-ratio: auto;
             margin: 0;
           }
@@ -43,7 +43,7 @@
 }
 
 .v-dark {
-  .paretner-item {
+  .client-item {
     img {
       filter: invert(1);
     }

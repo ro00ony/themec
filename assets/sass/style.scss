@@ -46,7 +46,7 @@
   --bg-color: #F3F3F3;
   --assistant-color: #E9E9E9;
 
-  --theme-color: #b3de4f;
+  --theme-color: #f68722;
 
   --theme-color-font: #fff;
 
@@ -73,11 +73,14 @@
   --divider-color: var(--border-color);
 }
 
+$box-shadow: 0px 11px 61.1px 3.9px rgba(34, 34, 34, 0.09);
+
+
 @mixin darkVersion() {
 
   --bg-color: #111;
   --assistant-color: #171717;
-  --theme-color: #b3de4f;
+  --theme-color: #f68722;
   --font-color: #d9d9d9;
   --heading-color: #fff;
   --border-color: #373737;
