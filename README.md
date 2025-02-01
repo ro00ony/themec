@@ -1,4 +1,4 @@
-# exfolio-html
+# THEMEC-html
  
 This repository hosts the HTML Standard.
 Code of conduct

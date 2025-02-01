@@ -16,7 +16,7 @@ const dsnParam = {
     smoothTouch: false,
     mouseMultiplier: 1
   },
-  name: "EXFOLIO"
+  name: "THEMEC"
 };
 
 (function ($) {
@@ -1511,66 +1511,139 @@ const dsnParam = {
       });
     });
   }
+
   /**
-   * New Code
+   * Custom Code ***************
    */
+  // 
+// Book Pop
+$(document).ready(function () {
+
+    $('.hero .btn-book').on('click', function (e) {
+        e.preventDefault();
+        $('#emailPopup').addClass('active');
+    });
+
+    $('.close-popup, .popup-overlay').on('click', function (e) {
+        if (e.target === this) {
+            $('#emailPopup').removeClass('active');
+        }
+    });
+
+    $(document).on('keydown', function (e) {
+        if (e.key === 'Escape') {
+            $('#emailPopup').removeClass('active');
+        }
+    });
+}); 
+
+  // make videos play only when they are in view
+  document.addEventListener("DOMContentLoaded", function () {
+    const videos = document.querySelectorAll(".lazy-video");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.play();
+                } else {
+                    entry.target.pause();
+                }
+            });
+        },
+        { threshold: 0.5 }
+    );
+
+    videos.forEach((video) => {
+        observer.observe(video);
+    });
+});
 
   // Video Pop For Latest Work
   $(document).ready(function () {
     const $popupOverlay = $('#video-popup');
     const $popupVideo = $('#popup-video');
 
-    // عند النقر على الفيديو
     $('.dsn-latest-work .box-video video').on('click', function () {
         const videoSrc = $(this).attr('src');
-        $popupOverlay.css('display', 'flex'); // عرض النافذة المنبثقة
-        $popupVideo.attr('src', videoSrc).trigger('play'); // تحديد مصدر الفيديو وتشغيله
+        $popupOverlay.css('display', 'flex'); 
+        $popupVideo.attr('src', videoSrc).trigger('play'); 
     });
 
-    // عند النقر على زر الإغلاق
     $('#close-popup').on('click', function () {
-        $popupOverlay.css('display', 'none'); // إخفاء النافذة المنبثقة
-        $popupVideo.trigger('pause').attr('src', ''); // إيقاف الفيديو ومسح المصدر
+        $popupOverlay.css('display', 'none'); 
+        $popupVideo.trigger('pause').attr('src', '');
     });
 
-    // عند النقر خارج الفيديو
+   
     $popupOverlay.on('click', function (e) {
         if ($(e.target).is($popupOverlay)) {
-            $popupOverlay.css('display', 'none'); // إخفاء النافذة المنبثقة
-            $popupVideo.trigger('pause').attr('src', ''); // إيقاف الفيديو ومسح المصدر
+            $popupOverlay.css('display', 'none'); 
+            $popupVideo.trigger('pause').attr('src', ''); 
         }
     });
 });
+
   // Video Pop For Servcies
   $(document).ready(function () {
     const $popupOverlay = $('#video-popup-2');
     const $popupVideo = $('#popup-video-2');
 
-    // عند النقر على الفيديو
+  
     $('.services-secttion .box-video video').on('click', function () {
         const videoSrc = $(this).attr('src');
-        $popupOverlay.css('display', 'flex'); // عرض النافذة المنبثقة
-        $popupVideo.attr('src', videoSrc).trigger('play'); // تحديد مصدر الفيديو وتشغيله
+        $popupOverlay.css('display', 'flex'); 
+        $popupVideo.attr('src', videoSrc).trigger('play'); 
     });
 
-    // عند النقر على زر الإغلاق
+  
     $('#close-popup-2').on('click', function () {
-        $popupOverlay.css('display', 'none'); // إخفاء النافذة المنبثقة
-        $popupVideo.trigger('pause').attr('src', ''); // إيقاف الفيديو ومسح المصدر
+        $popupOverlay.css('display', 'none'); 
+        $popupVideo.trigger('pause').attr('src', ''); 
     });
 
-    // عند النقر خارج الفيديو
+  
     $popupOverlay.on('click', function (e) {
         if ($(e.target).is($popupOverlay)) {
-            $popupOverlay.css('display', 'none'); // إخفاء النافذة المنبثقة
-            $popupVideo.trigger('pause').attr('src', ''); // إيقاف الفيديو ومسح المصدر
+            $popupOverlay.css('display', 'none'); 
+            $popupVideo.trigger('pause').attr('src', ''); 
         }
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".process-card");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  cards.forEach((card) => observer.observe(card));
+});
+
+  // Showing label when select choice 
+  document.addEventListener('DOMContentLoaded', function () {
+    const selectElement = document.getElementById('values_field_work');
+    const labelElement = document.getElementById('project-size-label');
+
+    selectElement.addEventListener('change', function () {
+      if (selectElement.value !== '') {
+        labelElement.classList.add('visible'); 
+      } else {
+        labelElement.classList.remove('visible'); 
+      }
+    });
+  });
 
   /**
-   * New Code
+   * Custom Code
    */
 
 

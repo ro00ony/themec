@@ -522,8 +522,11 @@
 }
 
 .header-page {
-    padding-top: 180px;
-
+    padding-top: 240px;
+    background-image: url(../img/hero-dark.png);
+    background-position: center;
+    background-size: cover;
+    
     .box-content {
         @include media_991 {
             width: 100%;

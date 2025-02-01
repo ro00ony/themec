@@ -71,6 +71,11 @@ $path_font: './fonts/';
     background-color: $assistant-color;
   }
 }
+.background-section-second {
+  &, .background-inner {
+    background-color: $assistant-second-color;
+  }
+}
 
 .background-border {
   &, .background-inner {
@@ -88,7 +93,7 @@ $path_font: './fonts/';
   background-color: $heading-color;
   color: $bg-color;
 }
-.bg-graident {
+.bg-gradient {
   background: linear-gradient(to right, #29A9E1, #F68722, #F9CD18);
 }
 .bg-white {
@@ -97,6 +102,12 @@ $path_font: './fonts/';
 
 .theme-color {
   color: $theme-color;
+}
+.light-color {
+  color: $light-color
+}
+.dark-color {
+  color: $assistant-color;
 }
 
 .heading-color {
@@ -135,6 +146,28 @@ $path_font: './fonts/';
 }
 .h-500 {
   height: 500px;
+}
+
+.fly-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+    z-index: 99;
+    cursor: pointer;
+.whatsapp-img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
 }
 
 //--> Overlay color

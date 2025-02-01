@@ -8,13 +8,17 @@
   padding-top: 22px;
   padding-bottom: 22px;
   border-radius: 0 0 15px 15px;
-  background-color: rgba(0, 0, 0, 0.40);
+  background-color: rgb(17 17 17);
   transition-property: background-color, padding-top, padding-bottom, transform;
   transition-duration: 0.5s;
   z-index: 97;
 
   &:not(.dsn-open){
     backdrop-filter: blur(8px);
+  }
+
+  &.main {
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   >.p-relative.dsn-container {
@@ -97,7 +101,7 @@
 .dsnload__img {
 
   img {
-    width: 80px;
+    width: 110px;
     max-width: 100%;
     height: auto;
   }
@@ -133,10 +137,6 @@
   span {
     color: white !important;
   }
-  &.transparent {
-  background-color: transparent;    
-  }
-
 }
 .v-light #site_menu_header.nav-bg {
  background-color: rgb(23, 23, 23);

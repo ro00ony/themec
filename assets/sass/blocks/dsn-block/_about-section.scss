@@ -476,10 +476,9 @@
     }
   }
   .box-text {
-    background: white;
+    background: $assistant-color;
     border-radius: 15px;
     padding: 60px 20px;
-    box-shadow: $box-shadow;
     @include media_768 {
       padding: 40px 15px;
     }
@@ -519,7 +518,7 @@
 
 .pos-narrative {
   .box-item {
-    background: #F3F3F3;
+    background: $light-color;
     border-radius: 15px;
     padding: 40px 20px;
     opacity: 0.1;
@@ -535,14 +534,232 @@
           height: 30px;
           text-align: center;
           line-height: 30px;
-          color: white;
+          color: $assistant-color;
           border-radius: 15px;
           left: 15px;
           top: 15px;
         }
     }
+    .title-box {
+      h4 {
+        color: $assistant-color;
+      }
+    }
+    .text {
+      p {
+        color: $assistant-color;
+      }
+    }
+
   }
 }
+
+.services-info {
+  .services-list {
+    .service-item {
+      background: $bg-color;
+      border-radius: 15px;
+      padding: 60px 20px;
+      ul {
+        li {
+          position: relative;
+          padding-left: 20px;
+          margin-bottom: 10px;
+          &::before {
+            content: "•";
+            color: $theme-color;
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Section Title Styling */
+.intro-features {
+
+  .arketing-intro p {
+    font-size: 1.1rem;
+    color: #f3f3f3;
+    max-width: 700px;
+    margin: 0 auto 40px;
+  }
+  
+  .feature-item {
+    background: #f68722;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    
+    &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    img {
+      margin-bottom: 10px;
+    }
+    h4 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #222;
+    }
+  }
+
+}
+
+/* Benefits Section */
+.arketing-benefits {
+  background: #141414;
+  
+  .inner-content {
+    .benefit-item {
+      background: #f3f3f3;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      img {
+        margin-bottom: 10px;
+      }
+      h4 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #222;
+        letter-spacing: 1px;
+      }
+      
+      p {
+        font-size: 1rem;
+        color: #666;
+      }
+    }
+    
+  }
+}
+
+
+.arketing-timeline {
+  background: #111;
+  padding: 80px 0;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 40%; 
+    height: 100%;
+    background-image: url(../img/pattern-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+        
+    @include media_1200(min) {
+      width: 50%;
+    }
+    @include media_991() {
+      width: 100%;
+      height: 20%;
+      top: unset;
+      bottom: 0px;
+    }
+  }
+
+  .inner-content {
+    text-align: left;
+    width: 50%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include media_991X1200() {
+      margin-right: 5%;
+    }
+    
+    @include media_991() {
+      max-width: unset;
+      text-align: unset; 
+      width: 100%;
+      padding-bottom: 150px;
+    }
+
+    h2 {
+      color: #fff;
+      margin-bottom: 40px;
+    }
+    
+    .timelines {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      
+      @include media_991() {
+        flex-wrap: wrap;
+        align-items: stretch;
+        align-content: center;
+        margin-right: 15px;
+        margin-left: 15px;
+      }
+
+      .timeline-item {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 15px;
+        text-align: center;
+        max-width: 600px;
+        transition: transform 0.3s ease-in-out;
+        
+        &:hover {
+          transform: scale(1.05);
+        }
+        
+        h4 {
+          font-size: 1.2rem;
+          color: #f9b234;
+          margin-bottom: 10px;
+        }
+        
+        p {
+          font-size: 1rem;
+          color: #ddd;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .seat-section-ar {
   .box-img {
@@ -583,3 +800,13 @@
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
