@@ -1560,25 +1560,50 @@ $(document).ready(function () {
 });
 
   // Video Pop For Latest Work
+  $(document).ready(function () {
+    const $popupOverlay = $('#video-popup-overlay');
+    const $popupVideo = $('#video-popup');
+
+    $('.latest-work .box-video video').on('click', function () {
+        const videoSrc = $(this).attr('src');
+        $popupOverlay.css('display', 'flex'); 
+        $popupVideo.attr('src', videoSrc).trigger('play'); 
+    });
+
+    $('#close-popup').on('click', function () {
+        $popupOverlay.css('display', 'none'); 
+        $popupVideo.trigger('pause').attr('src', '');
+    });
+
+   
+    $popupOverlay.on('click', function (e) {
+        if ($(e.target).is($popupOverlay)) {
+            $popupOverlay.css('display', 'none'); 
+            $popupVideo.trigger('pause').attr('src', ''); 
+        }
+    });
+});
+
+  // Video Pop For Servcies
 
   $(document).ready(function () {
-    const $popupOverlay = $('#video-popup');
-    const $popupVideo = $('#popup-video');
+    const $popupOverlay = $('#video-popup-overlay');
+    const $popupVideo = $('#video-popup');
 
     $('.latest-work .box-video video').on('click', function (e) {
         const videoSrc = $(this).attr('src');
 
         if ($(window).width() < 575) {
-            // 🔹 في الشاشات الصغيرة، تشغيل الفيديو داخل العنصر نفسه بدون بوب آب
-            e.preventDefault(); // منع أي سلوك افتراضي غير مرغوب فيه
-            this.setAttribute('playsinline', 'true'); // منع تشغيل الفيديو بوضع الشاشة الكاملة
-            this.setAttribute('controls', 'true'); // عرض عناصر التحكم للمستخدم
-            this.play(); // تشغيل الفيديو مباشرة داخل العنصر نفسه
-        } else {
-            // 🔹 في الشاشات الكبيرة، تشغيل الفيديو داخل البوب آب
-            $popupOverlay.css('display', 'flex');
-            $popupVideo.attr('src', videoSrc).trigger('play');
+            // في الشاشات الصغيرة، تشغيل الفيديو مباشرة داخل العنصر نفسه
+            e.preventDefault(); // منع أي سلوك افتراضي آخر غير مطلوب
+            this.play(); // تشغيل الفيديو مباشرة
+            this.setAttribute('playsinline', 'true'); // منع تشغيل الفيديو بوضع ملء الشاشة تلقائيًا
+            return; // لا يتم تفعيل البوب آب
         }
+
+        // في الشاشات الكبيرة، يتم تفعيل البوب آب
+        $popupOverlay.css('display', 'flex');
+        $popupVideo.attr('src', videoSrc).trigger('play');
     });
 
     $('#close-popup').on('click', function () {
@@ -1594,74 +1619,50 @@ $(document).ready(function () {
     });
 });
 
+  
 
-//   $(document).ready(function () {
-//     const $popupOverlay = $('#video-popup-overlay');
-//     const $popupVideo = $('#video-popup');
-
-//     $('.latest-work .box-video video').on('click', function () {
-//         const videoSrc = $(this).attr('src');
-//         $popupOverlay.css('display', 'flex'); 
-//         $popupVideo.attr('src', videoSrc).trigger('play'); 
-//     });
-
-//     $('#close-popup').on('click', function () {
-//         $popupOverlay.css('display', 'none'); 
-//         $popupVideo.trigger('pause').attr('src', '');
-//     });
-
-   
-//     $popupOverlay.on('click', function (e) {
-//         if ($(e.target).is($popupOverlay)) {
-//             $popupOverlay.css('display', 'none'); 
-//             $popupVideo.trigger('pause').attr('src', ''); 
-//         }
-//     });
-// });
-
-  // Video Pop For Servcies
-  $(document).ready(function () {
-    const $popupOverlay = $('#video-popup-overlay-2');
-    const $popupVideo = $('#video-popup-2');
+  // $(document).ready(function () {
+  //   const $popupOverlay = $('#video-popup-overlay-2');
+  //   const $popupVideo = $('#video-popup-2');
 
   
-    $('.services-section .box-video video').on('click', function () {
-        const videoSrc = $(this).attr('src');
-        $popupOverlay.css('display', 'flex'); 
-        $popupVideo.attr('src', videoSrc).trigger('play'); 
-    });
+  //   $('.services-section .box-video video').on('click', function () {
+  //       const videoSrc = $(this).attr('src');
+  //       $popupOverlay.css('display', 'flex'); 
+  //       $popupVideo.attr('src', videoSrc).trigger('play'); 
+  //   });
 
   
-    $('#close-popup-2').on('click', function () {
-        $popupOverlay.css('display', 'none'); 
-        $popupVideo.trigger('pause').attr('src', ''); 
-    });
+  //   $('#close-popup-2').on('click', function () {
+  //       $popupOverlay.css('display', 'none'); 
+  //       $popupVideo.trigger('pause').attr('src', ''); 
+  //   });
 
   
-    $popupOverlay.on('click', function (e) {
-        if ($(e.target).is($popupOverlay)) {
-            $popupOverlay.css('display', 'none'); 
-            $popupVideo.trigger('pause').attr('src', ''); 
-        }
-    });
-});
+  //   $popupOverlay.on('click', function (e) {
+  //       if ($(e.target).is($popupOverlay)) {
+  //           $popupOverlay.css('display', 'none'); 
+  //           $popupVideo.trigger('pause').attr('src', ''); 
+  //       }
+  //   });
+  // });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".process-card");
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".process-card");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
-  cards.forEach((card) => observer.observe(card));
-});
+    cards.forEach((card) => observer.observe(card));
+  });
 
   // Showing label when select choice 
   document.addEventListener('DOMContentLoaded', function () {
