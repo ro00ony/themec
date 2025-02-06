@@ -1584,7 +1584,7 @@ $(document).ready(function () {
     });
 });
 
-  // Video Pop For Servcies
+  // Video Pop For Servcies video-popup 
 
   $(document).ready(function () {
     const $popupOverlay = $('#video-popup-overlay');
@@ -1594,10 +1594,7 @@ $(document).ready(function () {
         const videoSrc = $(this).attr('src');
 
         if ($(window).width() < 575) {
-            // في الشاشات الصغيرة، تشغيل الفيديو مباشرة داخل العنصر نفسه
-            e.preventDefault(); // منع أي سلوك افتراضي آخر غير مطلوب
-            this.play(); // تشغيل الفيديو مباشرة
-            this.setAttribute('playsinline', 'true'); // منع تشغيل الفيديو بوضع ملء الشاشة تلقائيًا
+            // في الشاشات الصغيرة، السماح بتشغيل الفيديو في المشغل الافتراضي فقط
             return; // لا يتم تفعيل البوب آب
         }
 
