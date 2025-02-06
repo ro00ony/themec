@@ -1562,24 +1562,26 @@ $(document).ready(function () {
   // Video Pop For Latest Work
 
   $(document).ready(function () {
-    const $popupOverlay = $('#video-popup-overlay');
-    const $popupVideo = $('#video-popup');
-    const $closeButton = $('#close-popup');
+    const $popupOverlay = $('#video-popup');
+    const $popupVideo = $('#popup-video');
 
-    $('.latest-work .box-video video').on('click', function () {
+    $('.latest-work .box-video video').on('click', function (e) {
         const videoSrc = $(this).attr('src');
 
-        if ($(window).width() <= 575) {
-            // تشغيل الفيديو بدون تشغيل تلقائي على الجوال
-            $popupVideo.attr('src', videoSrc).prop('autoplay', false);
+        if ($(window).width() < 575) {
+            // 🔹 في الشاشات الصغيرة، تشغيل الفيديو داخل العنصر نفسه بدون بوب آب
+            e.preventDefault(); // منع أي سلوك افتراضي غير مرغوب فيه
+            this.setAttribute('playsinline', 'true'); // منع تشغيل الفيديو بوضع الشاشة الكاملة
+            this.setAttribute('controls', 'true'); // عرض عناصر التحكم للمستخدم
+            this.play(); // تشغيل الفيديو مباشرة داخل العنصر نفسه
         } else {
-            // تشغيل الفيديو تلقائيًا على الشاشات الكبيرة
+            // 🔹 في الشاشات الكبيرة، تشغيل الفيديو داخل البوب آب
             $popupOverlay.css('display', 'flex');
-            $popupVideo.attr('src', videoSrc).prop('autoplay', true).trigger('play');
+            $popupVideo.attr('src', videoSrc).trigger('play');
         }
     });
 
-    $closeButton.on('click', function () {
+    $('#close-popup').on('click', function () {
         $popupOverlay.css('display', 'none');
         $popupVideo.trigger('pause').attr('src', '');
     });
@@ -1590,14 +1592,8 @@ $(document).ready(function () {
             $popupVideo.trigger('pause').attr('src', '');
         }
     });
-
-    $(window).on('resize', function () {
-        if ($(window).width() <= 575) {
-            $popupOverlay.css('display', 'none');
-            $popupVideo.trigger('pause').attr('src', '');
-        }
-    });
 });
+
 
 //   $(document).ready(function () {
 //     const $popupOverlay = $('#video-popup-overlay');
