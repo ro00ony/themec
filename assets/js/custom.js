@@ -1652,6 +1652,19 @@ const dsnParam = {
   
     // Initialize on document ready
     initVideoPopup();
+
+    // Add specific fix for the videos page
+  if ($('.services-section').hasClass('videos') && isMobile()) {
+    $('.services-section.videos .box-video video').each(function () {
+      const video = this;
+      video.muted = true; // Ensure the video is muted (required for autoplay on mobile)
+      video.playsInline = true; // Ensure the video plays inline on mobile
+      video.addEventListener('loadedmetadata', function () {
+        video.currentTime = 0.1; // Seek to a small time to load the first frame
+      });
+      video.load(); // Trigger loading of the video
+    });
+  }
   
     // Re-initialize on window resize
     $(window).on('resize', initVideoPopup);
