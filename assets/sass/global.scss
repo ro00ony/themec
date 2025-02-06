@@ -96,6 +96,10 @@ $path_font: './fonts/';
 .bg-gradient {
   background: linear-gradient(to right, #29A9E1, #F68722, #F9CD18);
 }
+.bg-second-gradient {
+  background: linear-gradient(318deg, var(--bg-color) 10%, $theme-color 50%, $theme-color 40%, var(--bg-color) 89%);
+}
+
 .bg-white {
   background: #fff;
 }
@@ -409,10 +413,6 @@ $path_font: './fonts/';
   cursor: pointer;
 }
 
-
-.over-hidden {
-  overflow: hidden;
-}
 
 p {
   color: $body-color;

@@ -1,0 +1,43 @@
+.pos-narrative {
+  .box-item {
+    background: $light-color;
+    border-radius: 15px;
+    padding: 40px 20px;
+    opacity: 0.1;
+    @include media_768 {
+      padding: 30px 20px;
+    }
+    @include media_575 {
+      padding: 20px;
+    }
+    &:hover {
+      opacity: 1 !important;
+    }
+    &:last-child {
+        position: relative;
+        opacity: 1;
+        .current-way {
+          position: absolute;
+          width: 100px;
+          height: 30px;
+          text-align: center;
+          line-height: 30px;
+          color: $assistant-color;
+          border-radius: 15px;
+          left: 15px;
+          top: 15px;
+        }
+    }
+    .title-box {
+      h4 {
+        color: $assistant-color;
+      }
+    }
+    .text {
+      p {
+        color: $assistant-color;
+      }
+    }
+
+  }
+}

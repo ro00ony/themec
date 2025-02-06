@@ -1,4 +1,4 @@
-.dsn-latest-work {
+.latest-work {
     .box-video {
       width: 100%;
       height: 100%;
@@ -7,6 +7,10 @@
         cursor: pointer;
       }
     }
+    
+  }
+  
+  
   .popup-vid-overlay {
     display: none;
     position: fixed;
@@ -41,5 +45,3 @@
     }
 
   }
-
-}

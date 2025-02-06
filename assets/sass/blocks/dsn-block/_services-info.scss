@@ -1,0 +1,25 @@
+.services-info {
+    .services-list {
+      .service-item {
+        background: $bg-color;
+        border-radius: 15px;
+        padding: 60px 20px;
+        @include media_575 {
+            padding: 30px 20px;
+        }
+        @include media_575 {
+            padding: 15px;
+        }
+        ul {
+          li {
+            margin-bottom: 10px;
+            .icon {
+                color: var(--theme-color, orange);
+                font-size: 8px;
+                margin-right: 8px;
+            }
+            }
+        }
+      }
+    }
+}

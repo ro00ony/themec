@@ -26,6 +26,13 @@
   position: relative;
   max-width: 80%;
   margin: 0 auto;
+  @include media_768 {
+    gap: 40px;
+  }
+  @include media_575 {
+    max-width: 90%;
+  }
+
 }
 
 .process-card {
@@ -37,8 +44,14 @@
   width: 350px;
 
   @include media_768 {
-    width: auto;
-    margin-bottom: 30px;
+    width: 250px;
+  }
+  @include media_575 {
+    width: 200px;
+    padding: 10px;
+  }
+  @include media_400 {
+    width: 175px;
   }
 
 }
@@ -60,12 +73,22 @@
   max-width: 100%;
   border-radius: 15px;
   margin-bottom: 15px;
+  @include media_575 {
+    margin-bottom: 10px;
+  }
+
 }
 
 
 .process-card h3 {
   font-size: 1.5rem;
   color: #333;
+  @include media_575 {
+    font-size: 1.2rem;
+  }
+  @include media_400 {
+    font-size: 1rem;
+  }
 }
 
 .svg-arrow {
@@ -76,9 +99,12 @@
   animation: pulse 1.5s infinite;
   
   @include media_768 {
-    width: 40px;
-    height: 40px;
-    display: none;
+    width: 70px;     
+    height: 70px;     
+  }
+  @include media_575 {
+    width: 50px;     
+    height: 50px;     
   }
 }
 .svg-arrow path {

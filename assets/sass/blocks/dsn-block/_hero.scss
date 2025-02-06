@@ -21,6 +21,10 @@
     text-align: center;
     color: white;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    @include media_575 {
+      width: 100%;
+      max-width: calc(100% - 20px);
+    }
     h1 {
       font-size: 3rem;
       margin: 0;
@@ -32,30 +36,41 @@
       margin-top: 10px;
       color: #fff;
     }
+    @include media_768 {
+      & h1 {
+        font-size: 1.5rem;
+      }
+      & p {
+        font-size: 1rem;
+      }
+    }
     .btns {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 20px;
-    }
-    @include media_768 {
-      h1 {
-        font-size: 1.5rem;
+      @include media_575 {
+       & .dsn-btn-shape .button {
+          padding: 0 18px;
+        }
       }
-      p {
-        font-size: 1rem;
-      }
-    }
-    @include media_575 {
-     .btns .dsn-btn-shape .button {
-        padding: 0 25px;
-      }
-    }
-    @include media_400 {
-      .btns .dsn-btn-shape .button {
-        padding: 0 20px;
-        & .title-btn {
-          font-size: 12px;
+      @include media_400 {
+        & {
+          flex-wrap: wrap;
+        }
+        & .dsn-btn-shape {
+          &:first-child {
+            margin-top: 10px;
+          }
+          &:last-child {
+            margin-top: 0;
+          }
+        }
+        & .dsn-btn-shape .button {
+          padding: 0 15px;
+          & .title-btn {
+            font-size: 12px;
+          }
         }
       }
     }
