@@ -1559,7 +1559,7 @@ const dsnParam = {
     });
   });
 
-  // Video Popup For Latest Work
+  // Video Popup  For Latest Work
   $(document).ready(function () {
     const $popupOverlay = $('#video-popup-overlay');
     const $popupVideo = $('#video-popup');
@@ -1589,7 +1589,15 @@ const dsnParam = {
       } else {
         // Ensure videos work normally on smaller screens
         $('.latest-work .box-video video').off('click'); // Remove custom click handler
-        $('.latest-work .box-video video').attr('controls', true); // Add controls for mobile
+  
+        // Show controls on click for mobile
+        $('.latest-work .box-video video').on('click', function () {
+          // Remove controls from all videos
+          $('.latest-work .box-video video').removeAttr('controls');
+          // Add controls to the clicked video
+          $(this).attr('controls', true);
+        });
+
       }
     }
   
@@ -1599,7 +1607,6 @@ const dsnParam = {
     // Re-initialize on window resize
     $(window).on('resize', initVideoPopup);
   });
-  
 
   // Video Popup 2 For Servcies
   $(document).ready(function () {
@@ -1631,7 +1638,15 @@ const dsnParam = {
       } else {
         // Ensure videos work normally on smaller screens
         $('.services-section .box-video video').off('click'); // Remove custom click handler
-        $('.services-section .box-video video').attr('controls', true); // Add controls for mobile
+  
+        // Show controls on click for mobile
+        $('.services-section .box-video video').on('click', function () {
+          // Remove controls from all videos
+          $('.services-section .box-video video').removeAttr('controls');
+          // Add controls to the clicked video
+          $(this).attr('controls', true);
+        });
+
       }
     }
   
