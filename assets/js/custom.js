@@ -1594,7 +1594,8 @@ $(document).ready(function () {
         const videoSrc = $(this).attr('src');
 
         if ($(window).width() < 575) {
-            // السماح بتشغيل الفيديو داخل المشغل الافتراضي فقط بدون بوب
+          this.play();
+          // السماح بتشغيل الفيديو داخل المشغل الافتراضي فقط بدون بوب
             return;
         }
 
