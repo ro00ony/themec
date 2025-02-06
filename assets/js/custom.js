@@ -1560,6 +1560,7 @@ $(document).ready(function () {
 });
 
   // Video Pop For Latest Work
+
   $(document).ready(function () {
     const $popupOverlay = $('#video-popup-overlay');
     const $popupVideo = $('#video-popup');
@@ -1569,28 +1570,12 @@ $(document).ready(function () {
         const videoSrc = $(this).attr('src');
 
         if ($(window).width() <= 575) {
-            // عند الشاشات الصغيرة، تشغيل الفيديو في المشغل الافتراضي بكامل الشاشة
-            const fullScreenVideo = $('<video>', {
-                src: videoSrc,
-                controls: true,
-                autoplay: true,
-                style: 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: black; z-index: 1000;'
-            });
-
-            const closeBtn = $('<button>', {
-                text: 'X',
-                style: 'position: fixed; top: 15px; right: 15px; background: red; color: white; border: none; padding: 10px; font-size: 18px; cursor: pointer; z-index: 1001;',
-                click: function () {
-                    fullScreenVideo.remove();
-                    closeBtn.remove();
-                }
-            });
-
-            $('body').append(fullScreenVideo).append(closeBtn);
+            // تشغيل الفيديو بدون تشغيل تلقائي على الجوال
+            $popupVideo.attr('src', videoSrc).prop('autoplay', false);
         } else {
-            // عند الشاشات الأكبر، تشغيل الفيديو في البوب أب
+            // تشغيل الفيديو تلقائيًا على الشاشات الكبيرة
             $popupOverlay.css('display', 'flex');
-            $popupVideo.attr('src', videoSrc).trigger('play');
+            $popupVideo.attr('src', videoSrc).prop('autoplay', true).trigger('play');
         }
     });
 
@@ -1613,6 +1598,30 @@ $(document).ready(function () {
         }
     });
 });
+
+//   $(document).ready(function () {
+//     const $popupOverlay = $('#video-popup-overlay');
+//     const $popupVideo = $('#video-popup');
+
+//     $('.latest-work .box-video video').on('click', function () {
+//         const videoSrc = $(this).attr('src');
+//         $popupOverlay.css('display', 'flex'); 
+//         $popupVideo.attr('src', videoSrc).trigger('play'); 
+//     });
+
+//     $('#close-popup').on('click', function () {
+//         $popupOverlay.css('display', 'none'); 
+//         $popupVideo.trigger('pause').attr('src', '');
+//     });
+
+   
+//     $popupOverlay.on('click', function (e) {
+//         if ($(e.target).is($popupOverlay)) {
+//             $popupOverlay.css('display', 'none'); 
+//             $popupVideo.trigger('pause').attr('src', ''); 
+//         }
+//     });
+// });
 
   // Video Pop For Servcies
   $(document).ready(function () {
