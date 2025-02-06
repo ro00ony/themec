@@ -5694,6 +5694,11 @@ ul.intro-project-list li h5.title-list-project + p.description-list-project {
   align-items: center;
   z-index: 1000;
 }
+@media only screen and (max-width: 575px) {
+  .popup-vid-overlay {
+    display: none !important;
+  }
+}
 .popup-vid-overlay .popup-content {
   position: relative;
   width: 90%;
