@@ -1551,7 +1551,7 @@ $(document).ready(function () {
                 }
             });
         },
-        { threshold: 0.5 }
+        { threshold: 0.7 }
     );
 
     videos.forEach((video) => {
@@ -1561,36 +1561,66 @@ $(document).ready(function () {
 
   // Video Pop For Latest Work
   $(document).ready(function () {
-    const $popupOverlay = $('#video-popup');
-    const $popupVideo = $('#popup-video');
+    const $popupOverlay = $('#video-popup-overlay');
+    const $popupVideo = $('#video-popup');
+    const $closeButton = $('#close-popup');
 
-    $('.dsn-latest-work .box-video video').on('click', function () {
+    $('.latest-work .box-video video').on('click', function () {
         const videoSrc = $(this).attr('src');
-        $popupOverlay.css('display', 'flex'); 
-        $popupVideo.attr('src', videoSrc).trigger('play'); 
+
+        if ($(window).width() <= 575) {
+            // عند الشاشات الصغيرة، تشغيل الفيديو في المشغل الافتراضي بكامل الشاشة
+            const fullScreenVideo = $('<video>', {
+                src: videoSrc,
+                controls: true,
+                autoplay: true,
+                style: 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: black; z-index: 1000;'
+            });
+
+            const closeBtn = $('<button>', {
+                text: 'X',
+                style: 'position: fixed; top: 15px; right: 15px; background: red; color: white; border: none; padding: 10px; font-size: 18px; cursor: pointer; z-index: 1001;',
+                click: function () {
+                    fullScreenVideo.remove();
+                    closeBtn.remove();
+                }
+            });
+
+            $('body').append(fullScreenVideo).append(closeBtn);
+        } else {
+            // عند الشاشات الأكبر، تشغيل الفيديو في البوب أب
+            $popupOverlay.css('display', 'flex');
+            $popupVideo.attr('src', videoSrc).trigger('play');
+        }
     });
 
-    $('#close-popup').on('click', function () {
-        $popupOverlay.css('display', 'none'); 
+    $closeButton.on('click', function () {
+        $popupOverlay.css('display', 'none');
         $popupVideo.trigger('pause').attr('src', '');
     });
 
-   
     $popupOverlay.on('click', function (e) {
         if ($(e.target).is($popupOverlay)) {
-            $popupOverlay.css('display', 'none'); 
-            $popupVideo.trigger('pause').attr('src', ''); 
+            $popupOverlay.css('display', 'none');
+            $popupVideo.trigger('pause').attr('src', '');
+        }
+    });
+
+    $(window).on('resize', function () {
+        if ($(window).width() <= 575) {
+            $popupOverlay.css('display', 'none');
+            $popupVideo.trigger('pause').attr('src', '');
         }
     });
 });
 
   // Video Pop For Servcies
   $(document).ready(function () {
-    const $popupOverlay = $('#video-popup-2');
-    const $popupVideo = $('#popup-video-2');
+    const $popupOverlay = $('#video-popup-overlay-2');
+    const $popupVideo = $('#video-popup-2');
 
   
-    $('.services-secttion .box-video video').on('click', function () {
+    $('.services-section .box-video video').on('click', function () {
         const videoSrc = $(this).attr('src');
         $popupOverlay.css('display', 'flex'); 
         $popupVideo.attr('src', videoSrc).trigger('play'); 
