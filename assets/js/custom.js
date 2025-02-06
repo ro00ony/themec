@@ -1561,88 +1561,86 @@ const dsnParam = {
 
   // Video Popup For Latest Work
   $(document).ready(function () {
-  const $popupOverlay = $('#video-popup-overlay');
-  const $popupVideo = $('#video-popup');
-
-  function initVideoPopup() {
-    if ($(window).width() > 575) {
-      // Attach click event to video elements
-      $('.latest-work .box-video video').on('click', function () {
-        const videoSrc = $(this).attr('src');
-        $popupOverlay.css('display', 'flex');
-        $popupVideo.attr('src', videoSrc).trigger('play');
-      });
-
-      // Attach click event to close button
-      $('#close-popup').on('click', function () {
-        $popupOverlay.css('display', 'none');
-        $popupVideo.trigger('pause').attr('src', '');
-      });
-
-      // Attach click event to overlay
-      $popupOverlay.on('click', function (e) {
-        if ($(e.target).is($popupOverlay)) {
+    const $popupOverlay = $('#video-popup-overlay');
+    const $popupVideo = $('#video-popup');
+  
+    function initVideoPopup() {
+      if ($(window).width() > 575) {
+        // Attach click event to video elements for larger screens
+        $('.latest-work .box-video video').on('click', function () {
+          const videoSrc = $(this).attr('src');
+          $popupOverlay.css('display', 'flex');
+          $popupVideo.attr('src', videoSrc).trigger('play');
+        });
+  
+        // Attach click event to close button
+        $('#close-popup').on('click', function () {
           $popupOverlay.css('display', 'none');
           $popupVideo.trigger('pause').attr('src', '');
-        }
-      });
-    } else {
-      // Remove event handlers if screen width is <= 575
-      $('.latest-work .box-video video').off('click');
-      $('#close-popup-2').off('click');
-      $popupOverlay.off('click');
+        });
+  
+        // Attach click event to overlay
+        $popupOverlay.on('click', function (e) {
+          if ($(e.target).is($popupOverlay)) {
+            $popupOverlay.css('display', 'none');
+            $popupVideo.trigger('pause').attr('src', '');
+          }
+        });
+      } else {
+        // Ensure videos work normally on smaller screens
+        $('.latest-work .box-video video').off('click'); // Remove custom click handler
+        $('.latest-work .box-video video').attr('controls', true); // Add controls for mobile
+      }
     }
-  }
-
-  // Initialize on document ready
-  initVideoPopup();
-
-  // Re-initialize on window resize
-  $(window).on('resize', initVideoPopup);
+  
+    // Initialize on document ready
+    initVideoPopup();
+  
+    // Re-initialize on window resize
+    $(window).on('resize', initVideoPopup);
   });
+  
 
   // Video Popup 2 For Servcies
   $(document).ready(function () {
-  const $popupOverlay = $('#video-popup-overlay-2');
-  const $popupVideo = $('#video-popup-2');
-
-  function initVideoPopup2() {
-    if ($(window).width() > 575) {
-      // Attach click event to video elements
-      $('.services-section .box-video video').on('click', function () {
-        const videoSrc = $(this).attr('src');
-        $popupOverlay.css('display', 'flex');
-        $popupVideo.attr('src', videoSrc).trigger('play');
-      });
-
-      // Attach click event to close button
-      $('#close-popup-2').on('click', function () {
-        $popupOverlay.css('display', 'none');
-        $popupVideo.trigger('pause').attr('src', '');
-      });
-
-      // Attach click event to overlay
-      $popupOverlay.on('click', function (e) {
-        if ($(e.target).is($popupOverlay)) {
+    const $popupOverlay = $('#video-popup-overlay-2');
+    const $popupVideo = $('#video-popup-2');
+  
+    function initVideoPopup() {
+      if ($(window).width() > 575) {
+        // Attach click event to video elements for larger screens
+        $('.services-section .box-video video').on('click', function () {
+          const videoSrc = $(this).attr('src');
+          $popupOverlay.css('display', 'flex');
+          $popupVideo.attr('src', videoSrc).trigger('play');
+        });
+  
+        // Attach click event to close button
+        $('#close-popup-2').on('click', function () {
           $popupOverlay.css('display', 'none');
           $popupVideo.trigger('pause').attr('src', '');
-        }
-      });
-    } else {
-      // Remove event handlers if screen width is <= 575
-      $('.services-section .box-video video').off('click');
-      $('#close-popup-2').off('click');
-      $popupOverlay.off('click');
+        });
+  
+        // Attach click event to overlay
+        $popupOverlay.on('click', function (e) {
+          if ($(e.target).is($popupOverlay)) {
+            $popupOverlay.css('display', 'none');
+            $popupVideo.trigger('pause').attr('src', '');
+          }
+        });
+      } else {
+        // Ensure videos work normally on smaller screens
+        $('.services-section .box-video video').off('click'); // Remove custom click handler
+        $('.services-section .box-video video').attr('controls', true); // Add controls for mobile
+      }
     }
-  }
-
-  // Initialize on document ready
-  initVideoPopup2();
-
-  // Re-initialize on window resize
-  $(window).on('resize', initVideoPopup2);
+  
+    // Initialize on document ready
+    initVideoPopup();
+  
+    // Re-initialize on window resize
+    $(window).on('resize', initVideoPopup);
   });
-
 
 
   // show process card in view 
