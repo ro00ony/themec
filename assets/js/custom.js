@@ -1517,7 +1517,7 @@ const dsnParam = {
    */
   // 
 // Book Pop
-$(document).ready(function () {
+  $(document).ready(function () {
 
     $('.hero .btn-book').on('click', function (e) {
         e.preventDefault();
@@ -1535,7 +1535,7 @@ $(document).ready(function () {
             $('#emailPopup').removeClass('active');
         }
     });
-}); 
+  }); 
 
   // make videos play only when they are in view
   document.addEventListener("DOMContentLoaded", function () {
@@ -1557,95 +1557,95 @@ $(document).ready(function () {
     videos.forEach((video) => {
         observer.observe(video);
     });
-});
+  });
 
-  // Video Pop For Latest Work
+  // Video Popup For Latest Work
   $(document).ready(function () {
-    const $popupOverlay = $('#video-popup-overlay');
-    const $popupVideo = $('#video-popup');
+  const $popupOverlay = $('#video-popup-overlay');
+  const $popupVideo = $('#video-popup');
 
-    $('.latest-work .box-video video').on('click', function () {
+  function initVideoPopup() {
+    if ($(window).width() > 575) {
+      // Attach click event to video elements
+      $('.latest-work .box-video video').on('click', function () {
         const videoSrc = $(this).attr('src');
-        $popupOverlay.css('display', 'flex'); 
-        $popupVideo.attr('src', videoSrc).trigger('play'); 
-    });
-
-    $('#close-popup').on('click', function () {
-        $popupOverlay.css('display', 'none'); 
-        $popupVideo.trigger('pause').attr('src', '');
-    });
-
-   
-    $popupOverlay.on('click', function (e) {
-        if ($(e.target).is($popupOverlay)) {
-            $popupOverlay.css('display', 'none'); 
-            $popupVideo.trigger('pause').attr('src', ''); 
-        }
-    });
-});
-
-  // Video Pop For Servcies video-popup 
-
-  $(document).ready(function () {
-    const $popupOverlay = $('#video-popup-overlay');
-    const $popupVideo = $('#video-popup');
-
-    $('.latest-work .box-video video').on('click', function (e) {
-        const videoSrc = $(this).attr('src');
-
-        if ($(window).width() < 575) {
-          this.play();
-          // السماح بتشغيل الفيديو داخل المشغل الافتراضي فقط بدون بوب
-            return;
-        }
-
-        // في الشاشات الكبيرة، يتم تفعيل البوب آب
         $popupOverlay.css('display', 'flex');
         $popupVideo.attr('src', videoSrc).trigger('play');
-    });
+      });
 
-    $('#close-popup').on('click', function () {
+      // Attach click event to close button
+      $('#close-popup').on('click', function () {
         $popupOverlay.css('display', 'none');
         $popupVideo.trigger('pause').attr('src', '');
-    });
+      });
 
-    $popupOverlay.on('click', function (e) {
+      // Attach click event to overlay
+      $popupOverlay.on('click', function (e) {
         if ($(e.target).is($popupOverlay)) {
-            $popupOverlay.css('display', 'none');
-            $popupVideo.trigger('pause').attr('src', '');
+          $popupOverlay.css('display', 'none');
+          $popupVideo.trigger('pause').attr('src', '');
         }
-    });
-});
+      });
+    } else {
+      // Remove event handlers if screen width is <= 575
+      $('.latest-work .box-video video').off('click');
+      $('#close-popup-2').off('click');
+      $popupOverlay.off('click');
+    }
+  }
+
+  // Initialize on document ready
+  initVideoPopup();
+
+  // Re-initialize on window resize
+  $(window).on('resize', initVideoPopup);
+  });
+
+  // Video Popup 2 For Servcies
+  $(document).ready(function () {
+  const $popupOverlay = $('#video-popup-overlay-2');
+  const $popupVideo = $('#video-popup-2');
+
+  function initVideoPopup2() {
+    if ($(window).width() > 575) {
+      // Attach click event to video elements
+      $('.services-section .box-video video').on('click', function () {
+        const videoSrc = $(this).attr('src');
+        $popupOverlay.css('display', 'flex');
+        $popupVideo.attr('src', videoSrc).trigger('play');
+      });
+
+      // Attach click event to close button
+      $('#close-popup-2').on('click', function () {
+        $popupOverlay.css('display', 'none');
+        $popupVideo.trigger('pause').attr('src', '');
+      });
+
+      // Attach click event to overlay
+      $popupOverlay.on('click', function (e) {
+        if ($(e.target).is($popupOverlay)) {
+          $popupOverlay.css('display', 'none');
+          $popupVideo.trigger('pause').attr('src', '');
+        }
+      });
+    } else {
+      // Remove event handlers if screen width is <= 575
+      $('.services-section .box-video video').off('click');
+      $('#close-popup-2').off('click');
+      $popupOverlay.off('click');
+    }
+  }
+
+  // Initialize on document ready
+  initVideoPopup2();
+
+  // Re-initialize on window resize
+  $(window).on('resize', initVideoPopup2);
+  });
 
 
-  
 
-  // $(document).ready(function () {
-  //   const $popupOverlay = $('#video-popup-overlay-2');
-  //   const $popupVideo = $('#video-popup-2');
-
-  
-  //   $('.services-section .box-video video').on('click', function () {
-  //       const videoSrc = $(this).attr('src');
-  //       $popupOverlay.css('display', 'flex'); 
-  //       $popupVideo.attr('src', videoSrc).trigger('play'); 
-  //   });
-
-  
-  //   $('#close-popup-2').on('click', function () {
-  //       $popupOverlay.css('display', 'none'); 
-  //       $popupVideo.trigger('pause').attr('src', ''); 
-  //   });
-
-  
-  //   $popupOverlay.on('click', function (e) {
-  //       if ($(e.target).is($popupOverlay)) {
-  //           $popupOverlay.css('display', 'none'); 
-  //           $popupVideo.trigger('pause').attr('src', ''); 
-  //       }
-  //   });
-  // });
-
+  // show process card in view 
   document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".process-card");
 
