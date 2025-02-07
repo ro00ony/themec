@@ -1808,7 +1808,7 @@ a:hover, a:active {
     display: none;
   }
 
-  .site-header:not(.dsn-hamburger) .menu-cover-title {
+  .site-header:not(.dsn-hamburger) .menu-cover-pattern {
     display: none;
   }
 }
@@ -2125,7 +2125,7 @@ a:hover, a:active {
   transform: none;
 }
 
-.site-header.dsn-hamburger .menu-cover-title {
+.site-header.dsn-hamburger .menu-cover-pattern {
   position: absolute;
   top: 50%;
   font-size: 20vw;
@@ -2138,50 +2138,50 @@ a:hover, a:active {
   pointer-events: none;
 }
 
-[dir="ltr"] .site-header.dsn-hamburger .menu-cover-title {
+[dir="ltr"] .site-header.dsn-hamburger .menu-cover-pattern {
   padding-left: inherit;
 }
 
-[dir="rtl"] .site-header.dsn-hamburger .menu-cover-title {
+[dir="rtl"] .site-header.dsn-hamburger .menu-cover-pattern {
   padding-right: inherit;
 }
 
 @media only screen and (min-width: 992px) {
-  [dir="ltr"] .site-header.dsn-hamburger .menu-cover-title {
+  [dir="ltr"] .site-header.dsn-hamburger .menu-cover-pattern {
     left: -15px;
   }
 
-  [dir="rtl"] .site-header.dsn-hamburger .menu-cover-title {
+  [dir="rtl"] .site-header.dsn-hamburger .menu-cover-pattern {
     right: -15px;
   }
 }
 
 @media only screen and (max-width: 991px) {
-  .site-header.dsn-hamburger .menu-cover-title {
+  .site-header.dsn-hamburger .menu-cover-pattern {
     width: 100%;
   }
 
-  [dir="ltr"] .site-header.dsn-hamburger .menu-cover-title {
+  [dir="ltr"] .site-header.dsn-hamburger .menu-cover-pattern {
     left: 0;
     padding-right: inherit;
   }
 
-  [dir="rtl"] .site-header.dsn-hamburger .menu-cover-title {
+  [dir="rtl"] .site-header.dsn-hamburger .menu-cover-pattern {
     right: 0;
     padding-left: inherit;
   }
 }
 
-.site-header.dsn-hamburger.dsn-open .menu-cover-title {
+.site-header.dsn-hamburger.dsn-open .menu-cover-pattern {
   transition-delay: 1s;
   opacity: 0.09;
 }
 
-[dir="ltr"] .site-header.dsn-hamburger.dsn-open .menu-cover-title {
+[dir="ltr"] .site-header.dsn-hamburger.dsn-open .menu-cover-pattern {
   transform: translateY(-50%) translateX(-40%) rotate(-90deg);
 }
 
-[dir="rtl"] .site-header.dsn-hamburger.dsn-open .menu-cover-title {
+[dir="rtl"] .site-header.dsn-hamburger.dsn-open .menu-cover-pattern {
   transform: translateY(-50%) translateX(40%) rotate(90deg);
 }
 

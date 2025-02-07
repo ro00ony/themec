@@ -14,17 +14,19 @@
             margin-right: 30px;
         }
     }
-    #site_menu_header {
-        .main-navigation {
-            .menu-cover-title {
-                transform: translateY(0%) translateX(0%) rotate(0deg);
-                background-image: url(../img/second-pattern.png);
-            }
-        }
+
+    .site-header .language-switcher {
+        margin-right: auto;
+        margin-left: 30px;
+        @include media_991 {
+            margin-right: auto;
+            margin-left: 10px;
+          }    
     }
+
     #navbar_toggle {
         .toggle-icon {
-            margin-left: 10px;
+            margin-left: 0;
             margin-right: 0;
         }
         .toggle-text {

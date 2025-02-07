@@ -161,16 +161,23 @@ $path_font: './fonts/';
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px rgba(246, 135, 34, 0.3);
     transition: transform 0.3s ease;
     border-radius: 15px;
     z-index: 99;
-    cursor: pointer;
-.whatsapp-img:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
+    @include media_575 {
+      width: 30px;
+      height: 30px;
+      img {
+        width: 25px;
+      }
+    }
+    &:hover {
+      box-shadow: 0px 0px 10px rgba(246, 135, 34, 0.6);
+      img {
+        transform: scale(1.2);
+      }
+    }
 
 }
 

@@ -56,7 +56,28 @@
     position: relative;
     z-index: 1;
   }
-
+  .language-switcher {
+    margin-left: auto;
+    margin-right: 30px;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease 0.9s;
+    &.hide {
+      visibility: hidden;
+      opacity: 0;
+    }  
+    @include media_991 {
+      margin-right: 15px;
+    }
+    button {
+      cursor: pointer;
+      font-size: 16px;
+      color: $theme-color;
+    } 
+  }
+  &.navbar-toggle.open ~ .language-switcher {
+    display: none;
+  }
   ul.primary-nav {
     display: flex;
     padding-left: 0;
@@ -77,10 +98,18 @@
     &:not(.dsn-hamburger) {
       @import "menu/classic";
 
-      .menu-cover-title {
+      .menu-cover-pattern {
         display: none;
       }
     }
+  }
+  @include media_575() {
+    padding-left: 40px; 
+    padding-right: 40px; 
+  }
+  @include media_400() {
+    padding-left: 25px; 
+    padding-right: 25px; 
   }
 
 

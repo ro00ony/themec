@@ -13,7 +13,7 @@
   display: flex;
   @include media_991() {
     flex-direction: column;
-    overflow: auto;
+    overflow: hidden;
   }
 }
 
@@ -138,15 +138,20 @@ ul {
 
 
 @import "nav_toogle";
-@import "menu-cover-title";
+@import "menu-cover-pattern";
 
 
 &.dsn-open {
-  .menu-cover-title {
+  .menu-cover-pattern {
     transition-delay: 1s;
-    opacity: 0.09;
-    transform: translateY(-50%) 
-    translateX(-40%) rotate(-90deg);
+    opacity: 0.7;
+    transform: translateY(0) translateX(0) rotate(0);
+    top: unset;
+    bottom: 0;
+    height: 100%;
+    background: url(../img/second-pattern.png);
+    background-size: cover;
+    max-height: 20%;
   }
 
   .toggle-line {
@@ -181,6 +186,25 @@ ul {
       text-align: center;
       ul {
         width: 100%;
+        top: 100px;
+        height: calc(80% - 100px);
+        justify-content: center;
+        gap: 20px;
+        padding: 0;
+        li {
+          font-size: 40px;
+          font-weight: bold;
+        }
+      }
+    }
+    @include media_575 {
+      ul {
+        top: 80px;
+        height: calc(80% - 80px);
+        gap: 15px;
+        li {
+          font-size: 28px;
+        }
       }
     }
   }

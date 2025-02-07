@@ -1516,6 +1516,36 @@ const dsnParam = {
    * Custom Code ***************
    */
   // 
+
+  // language-switcher
+  $(document).ready(function () {
+    $('#english-btn').click(function () {
+      $('html').attr('dir', 'rtl'); 
+      $('#english-btn').hide(); 
+      $('#arabic-btn').show(); 
+    });
+
+    // Switch to English (LTR) when Arabic button is clicked
+    $('#arabic-btn').click(function () {
+      $('html').attr('dir', 'ltr'); 
+      $('#arabic-btn').hide(); 
+      $('#english-btn').show(); 
+    });
+
+    // Hide Switcher lang When Navbar Opend
+    $('.navbar-toggle').click(function () {
+      $(this).toggleClass('open'); 
+    
+      // Condition to hide/show language-switcher
+      if ($('.navbar-toggle').hasClass('open')) {
+        $('.language-switcher').toggleClass('hide'); 
+      } else {
+        $('.language-switcher').removeClass('hide'); 
+      }
+    });
+
+  });
+
 // Book Pop
   $(document).ready(function () {
 
