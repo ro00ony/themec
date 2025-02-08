@@ -1536,7 +1536,6 @@ const dsnParam = {
     $('.navbar-toggle').click(function () {
       $(this).toggleClass('open'); 
     
-      // Condition to hide/show language-switcher
       if ($('.navbar-toggle').hasClass('open')) {
         $('.language-switcher').toggleClass('hide'); 
       } else {
@@ -1687,6 +1686,70 @@ const dsnParam = {
     $(window).on('resize', initVideoPopup);
   });
 
+  $(document).ready(function () {
+    const $popupOverlay = $('#video-popup-overlay-2');
+    const $popupVideo = $('#video-popup-2');
+  
+    // Function to check if the device is mobile
+    function isMobile() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+  
+    function initVideoPopup() {
+      if ($(window).width() > 575) {
+        // Attach click event to video elements for larger screens
+        $('.services-section .box-video video').on('click', function () {
+          const videoSrc = $(this).attr('src');
+          $popupOverlay.css('display', 'flex');
+          $popupVideo.attr('src', videoSrc).trigger('play');
+        });
+  
+        // Attach click event to close button
+        $('#close-popup-2').on('click', function () {
+          $popupOverlay.css('display', 'none');
+          $popupVideo.trigger('pause').attr('src', '');
+        });
+  
+        // Attach click event to overlay
+        $popupOverlay.on('click', function (e) {
+          if ($(e.target).is($popupOverlay)) {
+            $popupOverlay.css('display', 'none');
+            $popupVideo.trigger('pause').attr('src', '');
+          }
+        });
+      } else {
+        // Ensure videos work normally on smaller screens
+        $('.services-section .box-video video').off('click'); // Remove custom click handler
+  
+        // Force-load the first frame of each video on mobile
+        if (isMobile()) {
+          $('.services-section .box-video video').each(function () {
+            const video = this;
+            video.muted = true; // Ensure the video is muted (required for autoplay on mobile)
+            video.playsInline = true; // Ensure the video plays inline on mobile
+            video.addEventListener('loadedmetadata', function () {
+              video.currentTime = 0.1; // Seek to a small time to load the first frame
+            });
+            video.load(); // Trigger loading of the video
+          });
+        }
+  
+        // Show controls on click for mobile
+        $('.services-section .box-video video').on('click', function () {
+          // Remove controls from all videos
+          $('.services-section .box-video video').removeAttr('controls');
+          // Add controls to the clicked video
+          $(this).attr('controls', true);
+        });
+      }
+    }
+  
+    // Initialize on document ready
+    initVideoPopup();
+  
+    // Re-initialize on window resize
+    $(window).on('resize', initVideoPopup);
+  });
 
   // show process card in view 
   document.addEventListener("DOMContentLoaded", () => {
