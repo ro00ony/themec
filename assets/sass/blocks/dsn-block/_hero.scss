@@ -57,14 +57,10 @@
       @include media_400 {
         & {
           flex-wrap: wrap;
+          margin-top: 20px;
         }
         & .dsn-btn-shape {
-          &:first-child {
-            margin-top: 10px;
-          }
-          &:last-child {
             margin-top: 0;
-          }
         }
         & .dsn-btn-shape .button {
           padding: 0 15px;

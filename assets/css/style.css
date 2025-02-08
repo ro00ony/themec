@@ -892,6 +892,9 @@ dsn-bg-pattern bg-square
   padding-left: 0;
   padding-right: 24px;
 }
+[dir=rtl] .dsn-form .entry-box input[type=tel] {
+  text-align: right;
+}
 
 input::-moz-placeholder, textarea::-moz-placeholder, .form-control::-moz-placeholder, .form-box input::-moz-placeholder, .form-box textarea::-moz-placeholder {
   color: var(--font-color);
@@ -5257,11 +5260,9 @@ ul.intro-project-list li h5.title-list-project + p.description-list-project {
 @media only screen and (max-width: 400px) {
   .hero .hero-content .btns {
     flex-wrap: wrap;
+    margin-top: 20px;
   }
-  .hero .hero-content .btns .dsn-btn-shape:first-child {
-    margin-top: 10px;
-  }
-  .hero .hero-content .btns .dsn-btn-shape:last-child {
+  .hero .hero-content .btns .dsn-btn-shape {
     margin-top: 0;
   }
   .hero .hero-content .btns .dsn-btn-shape .button {
