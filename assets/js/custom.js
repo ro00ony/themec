@@ -1519,30 +1519,49 @@ const dsnParam = {
 
   // language-switcher
   $(document).ready(function () {
-    $('#english-btn').click(function () {
-      $('html').attr('dir', 'rtl'); 
-      $('#english-btn').hide(); 
-      $('#arabic-btn').show(); 
-    });
-
-    // Switch to English (LTR) when Arabic button is clicked
-    $('#arabic-btn').click(function () {
-      $('html').attr('dir', 'ltr'); 
-      $('#arabic-btn').hide(); 
-      $('#english-btn').show(); 
-    });
-
-    // Hide Switcher lang When Navbar Opend
-    $('.navbar-toggle').click(function () {
-      $(this).toggleClass('open'); 
-    
-      if ($('.navbar-toggle').hasClass('open')) {
-        $('.language-switcher').toggleClass('hide'); 
+    // Function to set the direction and save it to localStorage
+    function setDirection(dir) {
+      $('html').attr('dir', dir); 
+      localStorage.setItem('dir', dir); 
+    }
+  
+    // Function to update the button visibility based on the direction
+    function updateButtons(dir) {
+      if (dir === 'rtl') {
+        $('#english-btn').hide();
+        $('#arabic-btn').show();
       } else {
-        $('.language-switcher').removeClass('hide'); 
+        $('#arabic-btn').hide();
+        $('#english-btn').show();
+      }
+    }
+  
+    const savedDir = localStorage.getItem('dir') || 'ltr'; 
+    setDirection(savedDir);
+    updateButtons(savedDir); 
+  
+    // Switch to Arabic (RTL) 
+    $('#english-btn').click(function () {
+      setDirection('rtl'); 
+      updateButtons('rtl'); 
+    });
+  
+    // Switch to English (LTR) 
+    $('#arabic-btn').click(function () {
+      setDirection('ltr'); 
+      updateButtons('ltr'); 
+    });
+  
+    // Hide Switcher lang When Navbar Opened
+    $('.navbar-toggle').click(function () {
+      $(this).toggleClass('open');
+  
+      if ($('.navbar-toggle').hasClass('open')) {
+        $('.language-switcher').toggleClass('hide');
+      } else {
+        $('.language-switcher').removeClass('hide');
       }
     });
-
   });
 
 // Book Pop
@@ -1686,70 +1705,6 @@ const dsnParam = {
     $(window).on('resize', initVideoPopup);
   });
 
-  $(document).ready(function () {
-    const $popupOverlay = $('#video-popup-overlay-2');
-    const $popupVideo = $('#video-popup-2');
-  
-    // Function to check if the device is mobile
-    function isMobile() {
-      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    }
-  
-    function initVideoPopup() {
-      if ($(window).width() > 575) {
-        // Attach click event to video elements for larger screens
-        $('.services-section .box-video video').on('click', function () {
-          const videoSrc = $(this).attr('src');
-          $popupOverlay.css('display', 'flex');
-          $popupVideo.attr('src', videoSrc).trigger('play');
-        });
-  
-        // Attach click event to close button
-        $('#close-popup-2').on('click', function () {
-          $popupOverlay.css('display', 'none');
-          $popupVideo.trigger('pause').attr('src', '');
-        });
-  
-        // Attach click event to overlay
-        $popupOverlay.on('click', function (e) {
-          if ($(e.target).is($popupOverlay)) {
-            $popupOverlay.css('display', 'none');
-            $popupVideo.trigger('pause').attr('src', '');
-          }
-        });
-      } else {
-        // Ensure videos work normally on smaller screens
-        $('.services-section .box-video video').off('click'); // Remove custom click handler
-  
-        // Force-load the first frame of each video on mobile
-        if (isMobile()) {
-          $('.services-section .box-video video').each(function () {
-            const video = this;
-            video.muted = true; // Ensure the video is muted (required for autoplay on mobile)
-            video.playsInline = true; // Ensure the video plays inline on mobile
-            video.addEventListener('loadedmetadata', function () {
-              video.currentTime = 0.1; // Seek to a small time to load the first frame
-            });
-            video.load(); // Trigger loading of the video
-          });
-        }
-  
-        // Show controls on click for mobile
-        $('.services-section .box-video video').on('click', function () {
-          // Remove controls from all videos
-          $('.services-section .box-video video').removeAttr('controls');
-          // Add controls to the clicked video
-          $(this).attr('controls', true);
-        });
-      }
-    }
-  
-    // Initialize on document ready
-    initVideoPopup();
-  
-    // Re-initialize on window resize
-    $(window).on('resize', initVideoPopup);
-  });
 
   // show process card in view 
   document.addEventListener("DOMContentLoaded", () => {
@@ -1770,17 +1725,19 @@ const dsnParam = {
   });
 
   // Showing label when select choice 
-  document.addEventListener('DOMContentLoaded', function () {
-    const selectElement = document.getElementById('values_field_work');
-    const labelElement = document.getElementById('project-size-label');
-
-    selectElement.addEventListener('change', function () {
-      if (selectElement.value !== '') {
-        labelElement.classList.add('visible'); 
-      } else {
-        labelElement.classList.remove('visible'); 
-      }
-    });
+  $(document).ready(function () {
+    if (window.location.pathname.includes('get-quotation.html') || $('.box-form').length > 0) {
+      const $selectElement = $('#values_field_work');
+      const $labelElement = $('#project-size-label');
+  
+      $selectElement.on('change', function () {
+        if ($selectElement.val() !== '') {
+          $labelElement.addClass('visible'); 
+        } else {
+          $labelElement.removeClass('visible'); 
+        }
+      });
+    }
   });
 
   /**
